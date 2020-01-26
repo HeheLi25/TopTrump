@@ -16,6 +16,7 @@ public class Game {
 	private int howManyAlive;
 	private int roundChoice;
 	private boolean inGame;
+	private boolean isDraw;
 	
 	public Game(int AIPlayers){
 		this.numOfPlayers = AIPlayers+1; //total player number
@@ -35,6 +36,7 @@ public class Game {
 		System.out.println("Game start");
 		howManyAlive = numOfPlayers;
 		inGame = true;
+		isDraw = false;
 	}
 	//the overload constructor calls the origin constructor with numOfPlayers = 4.
 	public Game(){
@@ -134,31 +136,33 @@ public class Game {
 			winner = AIPlayerRound(cardThisRound);
 		}
 		//We got the result now. Handle the end of a round.
-		if(winner == null){
-			
-			
-			//handle the draw!(not done)
-			
-
+		ArrayList<Card> cardThisRoundArray = new ArrayList<Card>(cardThisRound.values());
+		if(isDraw == true){
+			//handle the draw!	
+			commonPile.addAll(cardThisRoundArray);
+			System.out.println("Round "+round +": This round was a Draw, common pile now has "+commonPile.size()+" cards");
+			isDraw = false;	//initial the flag
+			//the active player remains unchanged
 		}else{
 			//Winner gets all the cards this round.
-			winner.addCards(new ArrayList<Card>(cardThisRound.values()));
+			winner.addCards(cardThisRoundArray);
 			winner.setScore(winner.getScore()+1);
 			if(commonPile.size() == 0);{ //if there are cards in common pile, give them to the winner.
 				winner.addCards(commonPile);
 				commonPile.clear();
 			}
 			System.out.println("Round "+round +": Player "+ winner.getName() +" won this round.");
+			//change the active player.
+			for(int i = 0; i < players.length; i++){ 
+				if(players[i].equals(winner))
+					theActivePlayer = i;
+			}
+		}
 			Card winningCard = cardThisRound.get(winner);
 			System.out.println("The winning card was: '" + winningCard.getDescription() + "':");
 			System.out.println(winningCard.printWithAnArrow(roundChoice));
-			
-		}
 		round++;
-		for(int i = 0; i < players.length; i++){
-			if(players[i].equals(winner))
-				theActivePlayer = i;
-		}
+
 		
 		//Eliminate players, check whether the game should be end.
 		checkAlivePlayers();
@@ -213,6 +217,8 @@ public class Game {
 	    	if(temp.getData()[choice] > biggest) {
 	    		biggest = cards.get(i).getData()[choice];
 	    		biggestCard = temp;
+	    	}else if(temp.getData()[choice] == biggest){
+	    		isDraw = true;
 	    	}
 	    }
 		return biggestCard.getOwner();
