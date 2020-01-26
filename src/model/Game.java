@@ -148,7 +148,7 @@ public class Game {
 			//Winner gets all the cards this round.
 			winner.addCards(cardThisRoundArray);
 			winner.setScore(winner.getScore()+1);
-			if(commonPile.size() == 0);{ //if there are cards in common pile, give them to the winner.
+			if(commonPile.size() != 0);{ //if there are cards in common pile, give them to the winner.
 				winner.addCards(commonPile);
 				commonPile.clear();
 			}
@@ -209,7 +209,7 @@ public class Game {
 	
 	//Method to compare the cards that players drawn this round and find the winner. 
 	public Player compare(HashMap<Player, Card> cardThisRound, int choice){
-	    int biggest = 0;
+	    int biggest = -1;
 	    int position = 0;
 	    Card biggestCard = null;
 	    ArrayList<Card> cards = new ArrayList<Card>(cardThisRound.values());
@@ -218,10 +218,17 @@ public class Game {
 	    	if(temp.getData()[choice] > biggest) {
 	    		biggest = cards.get(i).getData()[choice];
 	    		biggestCard = temp;
-	    	}else if(temp.getData()[choice] == biggest){
-	    		isDraw = true;
 	    	}
 	    }
+	    //check whether there is a draw:
+	    int counter = 0;
+	    for(int i = 0; i<cards.size(); i++ ) {
+	    	Card temp = cards.get(i);
+	    	if(temp.getData()[choice] == biggest) {
+	    		counter ++;
+	    	}
+	    }
+	    if(counter > 1) isDraw = true;
 		return biggestCard.getOwner();
 	}
 	
