@@ -135,6 +135,7 @@ public class Game {
 		}else{
 			winner = AIPlayerRound(cardThisRound);
 		}
+		
 		//We got the result now. Handle the end of a round.
 		ArrayList<Card> cardThisRoundArray = new ArrayList<Card>(cardThisRound.values());
 		if(isDraw == true){
