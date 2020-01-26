@@ -1,7 +1,11 @@
 package commandline;
 
+import java.io.PrintStream;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
+import database.DBConnect;
 import model.Game;
 
 /**
@@ -39,6 +43,9 @@ public class TopTrumpsCLIApplication {
 					while(game.isInGame()){
 						game.oneRound();
 					}
+				}else if(userInput == 1){
+					seeStatistics(System.out);
+				}else{
 				}
 			
 			
@@ -46,6 +53,26 @@ public class TopTrumpsCLIApplication {
 		}
 
 
+	}
+
+	public static void seeStatistics(PrintStream ps) {
+		try {
+			DBConnect db = new DBConnect();
+			Statement stmt = db.getConnection().createStatement();
+			ResultSet rs = stmt.executeQuery("select * from pokemon");
+			rs.next();
+			ps.println();
+			ps.println(String.format("%-25s: %-5d", "Number of games:",rs.getInt("number_of_games") ));
+			ps.println(String.format("%-25s: %-5d", "Number of human wins:",rs.getInt("number_of_humanwins")));
+			ps.println(String.format("%-25s: %-5d", "Number of AI wins:",rs.getInt("number_of_aiwins")));
+			ps.println(String.format("%-25s: %-5d", "Average number of draws:",rs.getInt("average_number_of_draws")));
+			ps.println(String.format("%-25s: %-5d", "Longest game:",rs.getInt("longest_game")));	
+			ps.println();
+			stmt.close();
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -2,10 +2,15 @@ package model;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Scanner;
+
+import database.DBConnect;
 
 public class Game {
 	private Player[] players;
@@ -17,6 +22,7 @@ public class Game {
 	private int roundChoice;
 	private boolean inGame;
 	private boolean isDraw;
+	private int numOfDraws;
 	
 	public Game(int AIPlayers){
 		this.numOfPlayers = AIPlayers+1; //total player number
@@ -37,6 +43,7 @@ public class Game {
 		howManyAlive = numOfPlayers;
 		inGame = true;
 		isDraw = false;
+		numOfDraws = 0;
 	}
 	//the overload constructor calls the origin constructor with numOfPlayers = 4.
 	public Game(){
@@ -90,6 +97,12 @@ public class Game {
 		}catch(IOException e){
 			System.err.println("File reading error");
 			e.printStackTrace();
+		}finally{
+			try {
+				fr.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 		Collections.shuffle(deck); //shuffle card deck
 //		System.out.println(deck);
@@ -143,6 +156,7 @@ public class Game {
 			commonPile.addAll(cardThisRoundArray);
 			System.out.println("Round "+round +": This round was a Draw, common pile now has "+commonPile.size()+" cards");
 			isDraw = false;	//initial the flag
+			numOfDraws++;
 			//the active player remains unchanged
 		}else{
 			//Winner gets all the cards this round.
@@ -169,8 +183,22 @@ public class Game {
 		checkAlivePlayers();
 		if (howManyAlive <= 1) {
 			System.out.println("\nGame End\n");
-			if (howManyAlive == 1) System.out.println("The overall winnder was" + winner.getName());	
-			else System.out.println("There is no winner.");
+			if (howManyAlive == 1) {
+				System.out.println("The overall winnder was" + winner.getName());
+				try {
+					recordStatistic(winner);
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			else{
+				try {
+					recordStatistic(null);
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+				System.out.println("There is no winner.");
+			}
 			System.out.println("Scores:");
 			for (int i = 0; i < numOfPlayers; i++) {
 				System.out.println("   " + players[i].getName() + ": " + players[i].getScore());
@@ -234,13 +262,67 @@ public class Game {
 	
 	//This method will get the players who have no cards out of the game. 
 	public void checkAlivePlayers(){
-		for(Player p : players){
+		howManyAlive = numOfPlayers;
+		for(Player p : players){			
 			if(p.getCards().size() == 0){
 				p.setInGame(false);
 				howManyAlive--;
 			}
 		}
 	}
+	
+	
+	public void recordStatistic(Player winner) throws SQLException{
+		DBConnect db = new DBConnect();
+		ResultSet rs = null;
+		Statement stmt = null;
+		int numOfGames=0, numOfHumanWins=0,numOfAIWins=0,aveNumOfDraws=0,longestGame=0;
+		try {
+			stmt = db.getConnection().createStatement();
+			rs = stmt.executeQuery("select * from pokemon");
+			rs.next();
+			numOfGames = rs.getInt("number_of_games");
+			numOfHumanWins = rs.getInt("number_of_humanwins");
+			numOfAIWins = rs.getInt("number_of_aiwins");
+			aveNumOfDraws = rs.getInt("average_number_of_draws");
+			longestGame = rs.getInt("longest_game");
+			stmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		int newNumOfGames = numOfGames+1;
+		int newNumOfDraws = (numOfGames*aveNumOfDraws+numOfDraws)/newNumOfGames;
+		stmt = db.getConnection().createStatement();
+		stmt.executeUpdate("update pokemon set number_of_games = "+ newNumOfGames);
+		stmt.close();
+		stmt = db.getConnection().createStatement();
+		stmt.executeUpdate("update pokemon set average_number_of_draws = "+ newNumOfDraws);
+		stmt.close();
+		
+		if(round-1 > longestGame){
+			int newLongestGame = round-1;
+			stmt = db.getConnection().createStatement();
+			stmt.executeUpdate("update pokemon set longest_game = "+ newLongestGame);
+			stmt.close();
+		}
+		if(winner != null){
+			if(winner.getName().equals("Human Player")){
+				numOfHumanWins ++;
+				stmt = db.getConnection().createStatement();
+				stmt.executeUpdate("update pokemon set number_of_humanwins = "+ numOfHumanWins );
+				stmt.close();
+			}else{
+				numOfAIWins ++;
+				stmt = db.getConnection().createStatement();
+				stmt.executeUpdate("update pokemon set number_of_aiwins = "+ numOfAIWins );
+				stmt.close();
+			}
+		}
+		
+	}
+	
+	
+	
 
 	
 //	public static void main(String[] args){
