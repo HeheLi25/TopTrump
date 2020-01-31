@@ -2,7 +2,7 @@
 
 	<head>
 		<!-- Web page title -->
-    	<title>Top Trumps</title>
+    	<title>Top Trump</title>
     	
     	<!-- Import JQuery, as it provides functions you will probably find useful (see https://jquery.com/) -->
     	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -17,16 +17,55 @@
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"/>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+       
+      <style> 
+      
+        .button { 
+         text-align:center;
+         background: Transparent;
+         border:none;
+         height:50px;
+         width:350px;
+         dispay:inline-block;
+         margin:auto;
+         cursor:pointer;
+         font-family:simplifica;
+         }
+         .header { 
+         text-align:center;
+         margin-left:auto;
+         margin-right:auto;
+         margin-bottom: 40px;
+         }
+         
+      </style>
+         
 	</head>
 
-    <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
+    <body onload="initalize()"; style="background-image: url('/assets/background11.png'); background-size: 100% 100%;> <!-- Call the initalize method when the page loads -->
     	
-    	<div class="container">
-
-			<!-- Add your HTML Here -->
-		
-		</div>
+    <div class="container">
+    	
+    <div class="header"> 
+    	<h3 class="header"><img src="/assets/title.png" height="200" width="350"/></h3>
+    </div>
+    	 
+    <div class="buttons" style="text-align:center";>
+    	<span class="button"> 
+    	  <a href= "http://localhost:7777/toptrumps/game">
+    	     <button class="button"><img src="/assets/playButton.png" height="120" width="120"/><br>New Game</button>
+    	      </a>
+    	</span>
+    	
+    	<span class="button"> 
+    	  <a href= "http://localhost:7777/toptrumps/stats">
+    	     <button class="button"><img src="/assets/statsButton.png" height="98" width="110"/><br> Game Stats</button>
+    	      </a>
+    	</span> 
+    </div>
+    	
+   
+	</div>
 		
 		<script type="text/javascript">
 		
@@ -38,8 +77,7 @@
 				// --------------------------------------------------------------------------
 				
 				// For example, lets call our sample methods
-				helloJSONList();
-				helloWord("Student");
+				
 				
 			}
 			
