@@ -11,7 +11,7 @@ public class TopTrumps {
 		
 		System.out.println("~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("~~  A1 Hackathon  ~~");
-		System.out.println("~~ ~ Top Trumps ~ ~~");
+		System.out.println("~~~~ Top Trumps ~~~~");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~");
 		
 		// command line switches
