@@ -216,7 +216,12 @@ public class Game {
 		}
 		System.out.println("Enter the number for your attribute:");
 		Scanner s = new Scanner(System.in);
-		int humanChoice = s.nextInt();
+		int humanChoice = -1;
+		humanChoice = s.nextInt();
+		while(humanChoice<0||humanChoice>5) {
+			System.out.println("Please input a valid number.");
+			humanChoice = s.nextInt();
+		}
 		humanChoice --; //the options start from 1 but we need the number start from 0.
 		roundChoice = humanChoice;
 		winner = compare(cardThisRound, humanChoice);
@@ -318,6 +323,7 @@ public class Game {
 				stmt.close();
 			}
 		}
+		db.close();
 		
 	}
 	

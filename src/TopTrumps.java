@@ -1,5 +1,5 @@
 import commandline.TopTrumpsCLIApplication;
-
+import database.DBConnect;
 import online.TopTrumpsOnlineApplication;
 
 
@@ -21,7 +21,7 @@ public class TopTrumps {
 		
 		// check the command line for what switches are active
 		for (String arg : args) {
-			
+			DBConnect.checkTable();
 			if (arg.equalsIgnoreCase("-t")) printTestLog=true;
 			if (arg.equalsIgnoreCase("-c")) commandLineMode=true;
 			if (arg.equalsIgnoreCase("-o")) onlineMode=true;

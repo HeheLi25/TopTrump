@@ -46,6 +46,7 @@ public class TopTrumpsCLIApplication {
 				}else if(userInput == 1){
 					seeStatistics(System.out);
 				}else{
+					System.out.println("Please input a valid number.");
 				}
 			
 			
@@ -56,8 +57,9 @@ public class TopTrumpsCLIApplication {
 	}
 
 	public static void seeStatistics(PrintStream ps) {
+		DBConnect db = new DBConnect();
 		try {
-			DBConnect db = new DBConnect();
+			
 			Statement stmt = db.getConnection().createStatement();
 			ResultSet rs = stmt.executeQuery("select * from pokemon");
 			rs.next();
@@ -72,6 +74,8 @@ public class TopTrumpsCLIApplication {
 			rs.close();
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally {
+			db.close();
 		}
 	}
 
