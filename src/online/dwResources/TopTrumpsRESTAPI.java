@@ -16,6 +16,8 @@ import online.configuration.TopTrumpsJSONConfiguration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
+import database.DBConnect;
+
 @Path("/toptrumps") // Resources specified here should be hosted at http://localhost:7777/toptrumps
 @Produces(MediaType.APPLICATION_JSON) // This resource returns JSON content
 @Consumes(MediaType.APPLICATION_JSON) // This resource can take JSON content as input
@@ -71,6 +73,34 @@ public class TopTrumpsRESTAPI {
 		
 		return listAsJSONString;
 	}
+	
+	@GET
+	@Path("/getNumOfGames")
+	public int getNumOfGames() throws Exception{
+		return DBConnect.getNumOfGames();
+	}
+	@GET
+	@Path("/getNumOfHumanWins")
+	public int getNumOfHumanWins() throws Exception{
+		return DBConnect.getNumOfHumanWins();
+	}
+	@GET
+	@Path("/getNumOfAIWins")
+	public int getNumOfAIWins() throws Exception{
+		return DBConnect.getNumOfAIWins();
+	}
+	@GET
+	@Path("/getAverageDraws")
+	public int getAverageDraws() throws Exception{
+		return DBConnect.getAverageDraws();
+	}
+	@GET
+	@Path("/getLongestGame")
+	public int getLongestGame() throws Exception{
+		return DBConnect.getLongestGame();
+	}
+	
+	
 	
 	@GET
 	@Path("/helloWord")

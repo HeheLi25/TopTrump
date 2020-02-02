@@ -58,23 +58,23 @@
     	  
       
     <div class="stats">
-       <p class="stats">No. of games: </p> 
+       <p class="stats">No. of games: <a id="numofgames"></a></p> <p id="numofgames"></p>
      </div> 
      
     <div class="stats">
-       <p class="stats"> No. of human wins: </p> 
+       <p class="stats"> No. of human wins: <a id="numofhumanwins"></a></p> 
      </div> 
      
       <div class="stats">
-       <p class="stats"> No. of AI wins: </p> 
+       <p class="stats"> No. of AI wins: <a id="numofaiwins"></a></p> 
      </div> 
      
       <div class="stats">
-       <p class="stats"> Average draws: </p> 
+       <p class="stats"> Average draws: <a id="averagedraws"></a></p> 
      </div> 
      
       <div class="stats">
-       <p class="stats">Longest round: </p> 
+       <p class="stats">Longest round: <a id="longestgame"></a></p> 
      </div> 
 
      
@@ -91,7 +91,12 @@
 		
 			// Method that is called on page load
 			function initalize() {
-			
+				getNumOfGames();
+				getNumOfHumanWins();
+				getNumOfAIWins();
+				getAverageDraws();
+				getLongestGame();
+				 
 				// --------------------------------------------------------------------------
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
@@ -102,6 +107,61 @@
 			// -----------------------------------------
 			// Add your other Javascript methods Here
 			// -----------------------------------------
+			function getNumOfGames(){
+				 var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getNumOfGames");
+		            if (!xhr) {
+		                alert("CORS is not supported");
+		            }
+		            xhr.onload = function(e) {
+		                var responseText = JSON.parse(xhr.response);
+		                $('#numofgames').text(parseInt(responseText));
+		            };
+		            xhr.send();
+			}
+			function getNumOfHumanWins(){
+				 var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getNumOfHumanWins");
+		            if (!xhr) {
+		                alert("CORS is not supported");
+		            }
+		            xhr.onload = function(e) {
+		                var responseText = JSON.parse(xhr.response);
+		                $('#numofhumanwins').text(parseInt(responseText));
+		            };
+		            xhr.send();
+			}
+			function getNumOfAIWins(){
+				 var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getNumOfAIWins");
+		            if (!xhr) {
+		                alert("CORS is not supported");
+		            }
+		            xhr.onload = function(e) {
+		                var responseText = JSON.parse(xhr.response);
+		                $('#numofaiwins').text(parseInt(responseText));
+		            };
+		            xhr.send();
+			}
+			function getAverageDraws(){
+				 var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getAverageDraws");
+		            if (!xhr) {
+		                alert("CORS is not supported");
+		            }
+		            xhr.onload = function(e) {
+		                var responseText = JSON.parse(xhr.response);
+		                $('#averagedraws').text(parseInt(responseText));
+		            };
+		            xhr.send();
+			}
+			function getLongestGame(){
+				 var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getLongestGame");
+		            if (!xhr) {
+		                alert("CORS is not supported");
+		            }
+		            xhr.onload = function(e) {
+		                var responseText = JSON.parse(xhr.response);
+		                $('#longestgame').text(parseInt(responseText));
+		            };
+		            xhr.send();
+			}
 		
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
