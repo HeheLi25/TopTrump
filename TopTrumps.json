@@ -1,5 +1,5 @@
 {
-    "deckFile": "StarCitizenDeck.txt",
+    "deckFile": "pokemon.txt",
     "numAIPlayers": 4,
     "server": {
         "applicationConnectors" : [{"type" : "http", "port" : 7777}],
