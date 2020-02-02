@@ -58,7 +58,7 @@
     	  
       
     <div class="stats">
-       <p class="stats">No. of games: <a id="numofgames"></a></p> <p id="numofgames"></p>
+       <p class="stats">No. of games: <a id="numofgames"></a></p> 
      </div> 
      
     <div class="stats">
