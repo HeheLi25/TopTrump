@@ -17,16 +17,75 @@
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"/>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ 
+       <style>
+         .header { 
+         text-align:center; 
+         margin-left:auto;
+         margin-right:auto;
+         margin-bottom: 20px;
+         }
+         
+          .button { 
+         text-align:center;
+         background: Transparent; 
+         font-family:simplifica;
+         height:50px;
+         width:150px;
+         border:none;
+         dispay:inline-block;
+         margin:auto;
+         margin-top:5px;
+         cursor:pointer;
+         }
+         
+         .stats { 
+        background:Transparent;
+        font-size:20;
+        font-family:simplifica;
+        display:inline-block;
+        margin-right: 45px;
+        margin-top:150px;
+        }
+         
+       </style>
 
 	</head>
 
-    <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
+    <body onload="initalize()"; style="background-image: url('/assets/background3.png'); background-size: 100% 100%";> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
+    	  
+      
+    <div class="stats">
+       <p class="stats">No. of games: </p> 
+     </div> 
+     
+    <div class="stats">
+       <p class="stats"> No. of human wins: </p> 
+     </div> 
+     
+      <div class="stats">
+       <p class="stats"> No. of AI wins: </p> 
+     </div> 
+     
+      <div class="stats">
+       <p class="stats"> Average draws: </p> 
+     </div> 
+     
+      <div class="stats">
+       <p class="stats">Longest round: </p> 
+     </div> 
 
-			<!-- Add your HTML Here -->
-		
-		</div>
+     
+     
+    <div class="button">
+       <a href= "http://localhost:7777/toptrumps">
+         <button class="button"><img src="/assets/arrow.png" height="100" width="135"/><br> Back </button>
+       </a> 
+    </div>
+    
+    </div>
 		
 		<script type="text/javascript">
 		
@@ -37,10 +96,7 @@
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
 				
-				// For example, lets call our sample methods
-				helloJSONList();
-				helloWord("Student");
-				
+			
 			}
 			
 			// -----------------------------------------
