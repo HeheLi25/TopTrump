@@ -17,16 +17,212 @@
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"/>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+		
+        <meta name="viewport" 
+        content="width+device-width,initial-scale=1"> 
+        
+        <style> 
+        
+        .buttons{
+          background: #BCE1C2;
+          cursor: pointer;
+          width: 220px;
+          height: 30px;
+          display: block;
+          }
+        
+        .header {
+         text-align: right; 
+         width: 400px;
+         height: 70px;
+         float: right;
+         }
+         
+         .header2{ 
+         border-style:solid;
+         border-size:10px;
+         width:50%;
+         text-align:center;
+         margin-top:5px;
+         border-color: #0059b3;
+         }
+       
+         
+         .titleCard{ 
+         background:#F09341; 
+         margin-top:5px; 
+         border-radius:5px;
+         text-align:center;
+         }
+         
+        .card { 
+        background-color:lightgrey;
+        box-shadow: 2px 2px 15px black;
+        border-radius: 15px; 
+        rgba(0,0,0,0.2);
+        width: 17%;
+        height:60%;
+        display:inline-block;
+        margin: 10px;
+        margin-top:40px;
+        }
+        
+        .dropbox{
+        margin-top: 20px;
+        background:red;
+        height: 50px;
+        width: 100px;
+        }
+        .image{
+        margin-top:15px;
+        width:100%;
+       }
+        .container { 
+        padding 2px 16px;
+        text-align: left;
+        font-family:simplifica;
+        }
+        
+        </style>
+        
 	</head>
 
-    <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
+    <body onload="initalize()"; style="background-image:url('/assets/background2.png'); background-size:85%;"> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
-
-			<!-- Add your HTML Here -->
-		
-		</div>
+    	
+    	<div class="header"> 
+          <h3 class="header"><img src="/assets/title.png" height="160" width="300"/></h3>
+        </div>
+        
+        <div> 
+        <h4 class="header2" style="text-align:center";> Round:1 Players have drawn their cards </h4>
+        </div>
+        
+        <div> 
+        <h4 class="header2" style="text-align:center";> The active player is YOU </h4>
+        </div>
+        
+        <div class="buttons"> 
+             <button class="buttons" style="margin-top:10px";> Choose Category</button>
+          </div>
+       <div class="buttons"> 
+             <button class="buttons">Attack</button>
+          </div>
+        <div class="buttons"> 
+             <button class="buttons">Size</button>
+          </div>   
+              <div class="buttons"> 
+             <button class="buttons">Defence</button>
+          </div>   
+          <div class="buttons"> 
+             <button class="buttons">Speed</button>
+          </div> 
+          <div class="buttons"> 
+             <button class="buttons">HP</button>
+          </div>
+           
+    	<div class="card" id="humanPlayercard">
+    	   <div class="titleCard"> 
+    	      <p class="titleCard"> YOU </p>
+    	    </div> 
+    	    <div class="image">
+    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	    </div>
+    	       <div class="container"> 
+    	       <h3 id="cardNameOne"></h3>
+    	       <h5>Attributes:</h5>
+    	         <ul>
+    	           <li id="attributeOne"></li>
+    	           <li id="attributeTwo"></li>
+    	           <li id="attributeThree"></li>
+    	           <li id="attributeFour"></li>
+    	           <li id="attributeFive"></li>
+    	        </ul>
+    	   </div>
+    	</div>
+    	
+    	<div class="card" id="AIPlayer1card">  
+    	<div class="titleCard"> 
+    	      <p class="titleCard">AI Player 1 </p>
+    	    </div> 
+    	    <div class="image">
+    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	    </div>
+    	  <div class="container"> 
+    	   <h3 id="cardNameTwo"></h3>
+    	   <h5>Attributes:</h5>
+    	    <ul>
+    	     <li id="attributeOne"><u></u></li>
+    	     <li id="attributeTwo"><u></u></li>
+    	     <li id="attributeThree"><u></u></li>
+    	     <li id="attributeFour"><u></u></li>
+    	     <li id="attributeFive"><u></u></li>
+    	     </ul>
+    	   </div>
+    	</div> 
+    	
+    	<div class="card" id="AIPlayer2card"> 
+    	<div class="titleCard"> 
+    	      <p class="titleCard">AI Player 2 </p>
+    	    </div>  
+    	    <div class="image">
+    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	    </div>
+    	  <div class="container"> 
+    	   <h3 id="cardNameThree"></h3>
+    	   <h5>Attributes:</h5>
+    	    <ul>
+    	     <li id="attributeOne"><u></u></li>
+    	     <li id="attributeTwo"><u></u></li>
+    	     <li id="attributeThree"><u></u></li>
+    	     <li id="attributeFour"><u></u></li>
+    	     <li id="attributeFive"><u></u></li>
+    	     </ul>
+    	   </div>
+    	</div> 
+    	
+    	<div class="card" id="AIPlayer3card">  
+    	<div class="titleCard"> 
+    	      <p class="titleCard">AI Player 3 </p>
+    	    </div> 
+    	    <div class="image">
+    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	    </div>
+    	  <div class="container"> 
+    	   <h3 id="cardNameFour"></h3>
+    	   <h5>Attributes:</h5>
+    	    <ul>
+    	     <li id="attributeOne"><u></u></li>
+    	     <li id="attributeTwo"><u></u></li>
+    	     <li id="attributeThree"><u></u></li>
+    	     <li id="attributeFour"><u></u></li>
+    	     <li id="attributeFive"><u></u></li>
+    	     </ul>
+    	   </div>
+    	</div> 
+    	
+    	<div class="card" id="AIPlayer4card">  
+    	<div class="titleCard"> 
+    	      <p class="titleCard">AI Player 4 </p>
+    	    </div> 
+    	    <div class="image">
+    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	    </div>
+    	  <div class="container"> 
+    	   <h3id="cardNameFive"></h3>
+    	   <h5>Attributes:</h5>
+    	    <ul>
+    	     <li id="attributeOne"><u></u></li>
+    	     <li id="attributeTwo"><u></u></li>
+    	     <li id="attributeThree"><u></u></li>
+    	     <li id="attributeFour"><u></u></li>
+    	     <li id="attributeFive"><u></u></li>
+    	     </ul>
+    	   </div>
+    	</div> 
+    	 
+   </div>
 		
 		<script type="text/javascript">
 		
@@ -37,9 +233,7 @@
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
 				
-				// For example, lets call our sample methods
-				helloJSONList();
-				helloWord("Student");
+				// For example, lets call our sample methods				
 				
 			}
 			
