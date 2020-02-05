@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Player {
-	private String name;
-	private int score;
-	private ArrayList<Card> cards;
-	private boolean inGame;
+	public String name;
+	public int score;
+	public ArrayList<Card> cards;
+	public boolean inGame;
 	//constructor:
 	public Player(String name){
 		this.name = name;

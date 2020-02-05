@@ -96,30 +96,30 @@
         </div>
         
         <div> 
-        <h4 class="header2" style="text-align:center";> Round:1 Players have drawn their cards </h4>
+        <h4 class="header2" style="text-align:center";> <a id="text1">Round:1 Players have drawn their cards</a> </h4>
         </div>
         
         <div> 
-        <h4 class="header2" style="text-align:center";> The active player is YOU </h4>
+        <h4 class="header2" style="text-align:center";> <a id= "text2">The active player is YOU </a></h4>
         </div>
         
-        <div class="buttons"> 
-             <button class="buttons" style="margin-top:10px";> Choose Category</button>
+        <div> 
+             <p style="margin-top:10px";>  Choose Category: </p>
           </div>
        <div class="buttons"> 
-             <button class="buttons">Attack</button>
+             <button class="buttons" onclick="humanChoice(0)">Attack</button>
           </div>
         <div class="buttons"> 
-             <button class="buttons">Size</button>
+             <button class="buttons" onclick="humanChoice(1)">Size</button>
           </div>   
               <div class="buttons"> 
-             <button class="buttons">Defence</button>
+             <button class="buttons" onclick="humanChoice(2)">Defence</button>
           </div>   
           <div class="buttons"> 
-             <button class="buttons">Speed</button>
+             <button class="buttons" onclick="humanChoice(3)">Speed</button>
           </div> 
           <div class="buttons"> 
-             <button class="buttons">HP</button>
+             <button class="buttons" onclick="humanChoice(4)">HP</button>
           </div>
            
     	<div class="card" id="humanPlayercard">
@@ -127,17 +127,17 @@
     	      <p class="titleCard"> YOU </p>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card0">
     	    </div>
     	       <div class="container"> 
-    	       <h3 id="cardNameOne"></h3>
+    	       <h3 id="cardName0"></h3>
     	       <h5>Attributes:</h5>
     	         <ul>
-    	           <li id="attributeOne"></li>
-    	           <li id="attributeTwo"></li>
-    	           <li id="attributeThree"></li>
-    	           <li id="attributeFour"></li>
-    	           <li id="attributeFive"></li>
+    	           <li id="attributeOne0"></li>
+    	           <li id="attributeTwo0"></li>
+    	           <li id="attributeThree0"></li>
+    	           <li id="attributeFour0"></li>
+    	           <li id="attributeFive0"></li>
     	        </ul>
     	   </div>
     	</div>
@@ -147,17 +147,17 @@
     	      <p class="titleCard">AI Player 1 </p>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card1">
     	    </div>
     	  <div class="container"> 
-    	   <h3 id="cardNameTwo"></h3>
+    	   <h3 id="cardName1"></h3>
     	   <h5>Attributes:</h5>
     	    <ul>
-    	     <li id="attributeOne"><u></u></li>
-    	     <li id="attributeTwo"><u></u></li>
-    	     <li id="attributeThree"><u></u></li>
-    	     <li id="attributeFour"><u></u></li>
-    	     <li id="attributeFive"><u></u></li>
+    	     <li id="attributeOne1"><u></u></li>
+    	     <li id="attributeTwo1"><u></u></li>
+    	     <li id="attributeThree1"><u></u></li>
+    	     <li id="attributeFour1"><u></u></li>
+    	     <li id="attributeFive1"><u></u></li>
     	     </ul>
     	   </div>
     	</div> 
@@ -167,17 +167,17 @@
     	      <p class="titleCard">AI Player 2 </p>
     	    </div>  
     	    <div class="image">
-    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card2">
     	    </div>
     	  <div class="container"> 
-    	   <h3 id="cardNameThree"></h3>
+    	   <h3 id="cardName2"></h3>
     	   <h5>Attributes:</h5>
     	    <ul>
-    	     <li id="attributeOne"><u></u></li>
-    	     <li id="attributeTwo"><u></u></li>
-    	     <li id="attributeThree"><u></u></li>
-    	     <li id="attributeFour"><u></u></li>
-    	     <li id="attributeFive"><u></u></li>
+    	     <li id="attributeOne2"><u></u></li>
+    	     <li id="attributeTwo2"><u></u></li>
+    	     <li id="attributeThree2"><u></u></li>
+    	     <li id="attributeFour2"><u></u></li>
+    	     <li id="attributeFive2"><u></u></li>
     	     </ul>
     	   </div>
     	</div> 
@@ -187,17 +187,17 @@
     	      <p class="titleCard">AI Player 3 </p>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card3">
     	    </div>
     	  <div class="container"> 
-    	   <h3 id="cardNameFour"></h3>
+    	   <h3 id="cardName3"></h3>
     	   <h5>Attributes:</h5>
     	    <ul>
-    	     <li id="attributeOne"><u></u></li>
-    	     <li id="attributeTwo"><u></u></li>
-    	     <li id="attributeThree"><u></u></li>
-    	     <li id="attributeFour"><u></u></li>
-    	     <li id="attributeFive"><u></u></li>
+    	     <li id="attributeOne3"><u></u></li>
+    	     <li id="attributeTwo3"><u></u></li>
+    	     <li id="attributeThree3"><u></u></li>
+    	     <li id="attributeFour3"><u></u></li>
+    	     <li id="attributeFive3"><u></u></li>
     	     </ul>
     	   </div>
     	</div> 
@@ -207,17 +207,17 @@
     	      <p class="titleCard">AI Player 4 </p>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/background.png" width="175" height="140" alt="Firstcard">
+    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card4">
     	    </div>
     	  <div class="container"> 
-    	   <h3id="cardNameFive"></h3>
+    	   <h3 id="cardName4"></h3>
     	   <h5>Attributes:</h5>
     	    <ul>
-    	     <li id="attributeOne"><u></u></li>
-    	     <li id="attributeTwo"><u></u></li>
-    	     <li id="attributeThree"><u></u></li>
-    	     <li id="attributeFour"><u></u></li>
-    	     <li id="attributeFive"><u></u></li>
+    	     <li id="attributeOne4"><u></u></li>
+    	     <li id="attributeTwo4"><u></u></li>
+    	     <li id="attributeThree4"><u></u></li>
+    	     <li id="attributeFour4"><u></u></li>
+    	     <li id="attributeFive4"><u></u></li>
     	     </ul>
     	   </div>
     	</div> 
@@ -228,7 +228,8 @@
 		
 			// Method that is called on page load
 			function initalize() {
-			
+				gameInit();
+				humanStart();
 				// --------------------------------------------------------------------------
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
@@ -236,12 +237,44 @@
 				// For example, lets call our sample methods				
 				
 			}
+			function gameInit(){
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/gameInit");
+				xhr.send();
+			}
+			
+			function humanStart() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/roundStart"); // Request type and URL
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; 
+ 					var parsedText = JSON.parse(responseText);
+ 					var i;
+ 					for(i = 0; i < parsedText.length; i++){
+ 						$('#cardName'+i).text(parsedText[i].description);
+ 						$('#card'+i).attr('src',"/assets/"+parsedText[i].description+".png");
+ 						$('#attributeOne'+i).text("Attack:"+parsedText[i].attribute0);
+ 						$('#attributeTwo'+i).text("Size:"+parsedText[i].attribute1);
+ 						$('#attributeThree'+i).text("Defence:"+parsedText[i].attribute2);
+ 						$('#attributeFour'+i).text("Speed:"+parsedText[i].attribute3);
+ 						$('#attributeFive'+i).text("HP:"+parsedText[i].attribute4);
+ 					}
+				};
+				xhr.send();		
+			}
+			
+			function humanChoice(choice){
+				
+			}
+			
+
+			
+			
 			
 			// -----------------------------------------
 			// Add your other Javascript methods Here
 			// -----------------------------------------
 		
 			// This is a reusable method for creating a CORS request. Do not edit this.
+			
 			function createCORSRequest(method, url) {
   				var xhr = new XMLHttpRequest();
   				if ("withCredentials" in xhr) {

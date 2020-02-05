@@ -1,12 +1,12 @@
 package model;
 
 public class Card {
-	private String description;
-	private Player owner;
+	public String description;
+	public Player owner;
 	// Categories will be same for every single card
 	public static String[] category;
 	// data of each category
-	private int[] data = new int[5];
+	public int[] data = new int[5];
 
 	// Constructor:
 	public Card(String des, int d0, int d1, int d2, int d3, int d4) {
@@ -42,9 +42,10 @@ public class Card {
 	}
 
 	public void setCategory(String[] category) {
-		this.category = category;
+		Card.category = category;
 	}
 
+	@Override
 	public String toString() {
 		String result = "\'" + description + "\':" + "\n";
 		for (int i = 0; i < category.length; i++) {
@@ -75,6 +76,10 @@ public class Card {
 		}
 		return position;
 
+	}
+	public CardBuffer toCardBuffer() {
+		CardBuffer cb = new CardBuffer(description, data[0],data[1],data[2],data[3],data[4]);
+		return cb;
 	}
 
 }

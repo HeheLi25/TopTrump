@@ -1,7 +1,9 @@
 package online.dwResources;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -17,7 +19,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
 import database.DBConnect;
+import model.Card;
+import model.CardBuffer;
 import model.Game;
+import model.Player;
 
 @Path("/toptrumps") // Resources specified here should be hosted at http://localhost:7777/toptrumps
 @Produces(MediaType.APPLICATION_JSON) // This resource returns JSON content
@@ -38,6 +43,8 @@ public class TopTrumpsRESTAPI {
 	 * into JSON strings easily. */
 	ObjectWriter oWriter = new ObjectMapper().writerWithDefaultPrettyPrinter();
 	
+	Game model;
+	
 	/**
 	 * Contructor method for the REST API. This is called first. It provides
 	 * a TopTrumpsJSONConfiguration from which you can get the location of
@@ -45,9 +52,8 @@ public class TopTrumpsRESTAPI {
 	 * @param conf
 	 */
 	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) {
-		// ----------------------------------------------------
-		// Add relevant initalization here
-		// ----------------------------------------------------
+		model = new Game(4);
+		
 	}
 	
 	// ----------------------------------------------------
@@ -74,6 +80,38 @@ public class TopTrumpsRESTAPI {
 		
 		return listAsJSONString;
 	}
+	
+	@GET
+	@Path("/gameInit")
+	public void gameInit() throws Exception{
+		model.gameInit();
+	}
+
+	
+	@GET
+	@Path("/roundStart")
+	public String roundStart() throws Exception{
+		model.roundInit();
+		model.playersDrawCard();
+		HashMap<Player,Card> cards = model.getCardThisRound();
+		int size = cards.size();
+		List<CardBuffer> cardBuffers = new ArrayList<CardBuffer>();
+		for(int i = 0; i < size; i++) {
+			Card c = cards.get(model.getPlayers()[i]);
+			CardBuffer cb = c.toCardBuffer();
+			cardBuffers.add(cb);
+		}
+		return oWriter.writeValueAsString(cardBuffers);
+	}
+	
+	@GET
+	@Path("/humanChoice")
+	public void humanChoice(@QueryParam("choice") int choice) {
+		HashMap<Player,Card> cards = model.getCardThisRound();
+		Player winner = model.compare(cards, choice);
+	}
+
+	
 	
 	@GET
 	@Path("/getNumOfGames")

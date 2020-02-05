@@ -23,6 +23,9 @@ public class Game {
 	private boolean inGame;
 	private boolean isDraw;
 	private int numOfDraws;
+	public HashMap<Player, Card> cardThisRound;
+	public Player roundWinner;
+	
 	
 	public Game(int AIPlayers){
 		this.numOfPlayers = AIPlayers+1; //total player number
@@ -34,7 +37,7 @@ public class Game {
 		for(int i = 1; i < numOfPlayers; i++){
 			players[i] = new Player("AI Player "+i);
 		}
-		round = 1;
+		round = 0;
 		commonPile = new ArrayList<Card>();
 		theActivePlayer = 0;
 		//Distribute card
@@ -44,6 +47,21 @@ public class Game {
 		inGame = true;
 		isDraw = false;
 		numOfDraws = 0;
+		cardThisRound = new  HashMap<Player, Card>();
+	}
+	
+	public void gameInit() {
+		round = 0;
+		commonPile.clear();
+		theActivePlayer = 0;
+		//Distribute card
+		distributeCards();
+		System.out.println("Game start");
+		howManyAlive = numOfPlayers;
+		inGame = true;
+		isDraw = false;
+		numOfDraws = 0;
+		cardThisRound.clear();
 	}
 	//the overload constructor calls the origin constructor with numOfPlayers = 4.
 	public Game(){
@@ -62,14 +80,15 @@ public class Game {
 	public ArrayList<Card> getCommonPile() {
 		return commonPile;
 	}
-	public void setCommonPile(ArrayList<Card> commonPile) {
-		this.commonPile = commonPile;
-	}
 	public boolean isInGame(){
 		return inGame;
 	}
-	
-	
+	public int getTheActivePlayer() {
+		return theActivePlayer;
+	}
+	public HashMap<Player, Card> getCardThisRound() {
+		return cardThisRound;
+	}
 	//read cards from the file and distribute to players
 	private void distributeCards(){
 		FileReader fr = null;
@@ -126,19 +145,40 @@ public class Game {
 			}
 		}
 	}
-	
-	public void oneRound(){
+	public void roundInit() {
+		round++;
 		System.out.println();
-		Player winner = null;
+		cardThisRound.clear();
 		System.out.println("Round "+round);
-		HashMap<Player, Card> cardThisRound = new HashMap<Player, Card>();
+	}
+	//check whether the human player is in game or not.
+	public boolean getHumanStatus() {
+		if(players[0].isInGame()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	//The method that the players draw card and store the cards in cardThisRound.
+	public void playersDrawCard() {
 		for(int i = 0; i<numOfPlayers; i++){
 			if(players[i].isInGame()){
 				cardThisRound.put(players[i], players[i].drawCard());
 			}	
 		}
 		System.out.println("Round "+round +": Players have drawn their cards.");
-		if(players[0].isInGame()){
+	}
+	
+	
+	public void oneRound(){
+		roundInit();
+		
+		Player winner = null;
+		
+		playersDrawCard();
+		
+		if(getHumanStatus()){
 			System.out.print("You drew ");
 			System.out.print(cardThisRound.get(players[0]));
 			System.out.println("There are \'"+ players[0].getCards().size() + " cards in your deck");
@@ -148,7 +188,14 @@ public class Game {
 		}else{
 			winner = AIPlayerRound(cardThisRound);
 		}
-		
+		roundWinner = winner;
+		endRound();
+	}
+	
+	
+	
+	public void endRound() {
+		Player winner = roundWinner;
 		//We got the result now. Handle the end of a round.
 		ArrayList<Card> cardThisRoundArray = new ArrayList<Card>(cardThisRound.values());
 		if(isDraw == true){
@@ -176,9 +223,7 @@ public class Game {
 			Card winningCard = cardThisRound.get(winner);
 			System.out.println("The winning card was: '" + winningCard.getDescription() + "':");
 			System.out.println(winningCard.printWithAnArrow(roundChoice));
-		round++;
-
-		
+			
 		//Eliminate players, check whether the game should be end.
 		checkAlivePlayers();
 		if (howManyAlive <= 1) {
@@ -207,6 +252,8 @@ public class Game {
 			inGame = false;
 		}
 	}
+	
+	
 	
 	public Player humanPlayerRound(HashMap<Player, Card> cardThisRound){
 		Player winner = null;	
