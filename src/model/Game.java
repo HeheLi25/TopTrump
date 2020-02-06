@@ -51,8 +51,15 @@ public class Game {
 	}
 	
 	public void gameInit() {
+		players = new Player[numOfPlayers];
+		//first player is the human player
+		players[0] = new Player("Human Player");
+		//fill the array with AI players
+		for(int i = 1; i < numOfPlayers; i++){
+			players[i] = new Player("AI Player "+i);
+		}
 		round = 0;
-		commonPile.clear();
+		commonPile = new ArrayList<Card>();
 		theActivePlayer = 0;
 		//Distribute card
 		distributeCards();
@@ -61,7 +68,7 @@ public class Game {
 		inGame = true;
 		isDraw = false;
 		numOfDraws = 0;
-		cardThisRound.clear();
+		cardThisRound = new  HashMap<Player, Card>();
 	}
 	//the overload constructor calls the origin constructor with numOfPlayers = 4.
 	public Game(){
@@ -145,12 +152,15 @@ public class Game {
 			}
 		}
 	}
+	//When one round end, a new round starts, the variables initialized. 
 	public void roundInit() {
 		round++;
 		System.out.println();
 		cardThisRound.clear();
 		System.out.println("Round "+round);
+		isDraw = false;
 	}
+	
 	//check whether the human player is in game or not.
 	public boolean getHumanStatus() {
 		if(players[0].isInGame()) {
@@ -164,17 +174,17 @@ public class Game {
 	public void playersDrawCard() {
 		for(int i = 0; i<numOfPlayers; i++){
 			if(players[i].isInGame()){
-				cardThisRound.put(players[i], players[i].drawCard());
+				Card c = players[i].drawCard();
+				this.cardThisRound.put(players[i], c);
 			}	
 		}
 		System.out.println("Round "+round +": Players have drawn their cards.");
 	}
 	
-	
+	//An actual process of a round.
+	//This method calls other required method to complete a round of the game.
 	public void oneRound(){
 		roundInit();
-		
-		Player winner = null;
 		
 		playersDrawCard();
 		
@@ -184,15 +194,12 @@ public class Game {
 			System.out.println("There are \'"+ players[0].getCards().size() + " cards in your deck");
 		}
 		if(theActivePlayer == 0){
-			winner = humanPlayerRound(cardThisRound);
+			humanPlayerRound();
 		}else{
-			winner = AIPlayerRound(cardThisRound);
+			AIPlayerRound();
 		}
-		roundWinner = winner;
 		endRound();
 	}
-	
-	
 	
 	public void endRound() {
 		Player winner = roundWinner;
@@ -202,7 +209,6 @@ public class Game {
 			//handle the draw!	
 			commonPile.addAll(cardThisRoundArray);
 			System.out.println("Round "+round +": This round was a Draw, common pile now has "+commonPile.size()+" cards");
-			isDraw = false;	//initial the flag
 			numOfDraws++;
 			//the active player remains unchanged
 		}else{
@@ -223,13 +229,13 @@ public class Game {
 			Card winningCard = cardThisRound.get(winner);
 			System.out.println("The winning card was: '" + winningCard.getDescription() + "':");
 			System.out.println(winningCard.printWithAnArrow(roundChoice));
-			
+						
 		//Eliminate players, check whether the game should be end.
 		checkAlivePlayers();
 		if (howManyAlive <= 1) {
 			System.out.println("\nGame End\n");
 			if (howManyAlive == 1) {
-				System.out.println("The overall winnder was" + winner.getName());
+				System.out.println("The overall winnder was " + winner.getName());
 				try {
 					recordStatistic(winner);
 				} catch (SQLException e) {
@@ -252,10 +258,28 @@ public class Game {
 			inGame = false;
 		}
 	}
+	//This method transfer the current status and data of the game to a GameBuffer.
+	//GameBuffer is used to record the current status and data of the round.
+	//GameBuffer will be send to the online webpage. 
+	public GameBuffer toGameBuffer() {
+		GameBuffer gb = new GameBuffer();
+		gb.round = round;
+		gb.winner = roundWinner.getName();
+		gb.commonPile = commonPile.size();
+		gb.isDraw = isDraw;
+		gb.humanCards = players[0].numOfCards();
+		gb.humanInGame = players[0].isInGame();
+		gb.AI1InGame = players[1].isInGame();
+		gb.AI2InGame = players[2].isInGame();
+		gb.AI3InGame = players[3].isInGame();
+		gb.AI4InGame = players[4].isInGame();
+		
+		return gb;
+	}
 	
 	
 	
-	public Player humanPlayerRound(HashMap<Player, Card> cardThisRound){
+	public Player humanPlayerRound(){
 		Player winner = null;	
 		System.out.println("It is your turn to select a category, the categories are:");
 		for(int i = 0; i < 5; i++){
@@ -271,24 +295,27 @@ public class Game {
 		}
 		humanChoice --; //the options start from 1 but we need the number start from 0.
 		roundChoice = humanChoice;
-		winner = compare(cardThisRound, humanChoice);
+		winner = compare(humanChoice);
+		roundWinner = winner;
 		return winner;
 	}
 	
 	
-	public Player AIPlayerRound(HashMap<Player, Card> cardThisRound){
+	public Player AIPlayerRound(){
 		Player winner = null;
 		Card currentCard = cardThisRound.get(players[theActivePlayer]);
 		int AIChoice = currentCard.returnHighestStat();
 		roundChoice = AIChoice;
-		winner = compare(cardThisRound, AIChoice);
+		winner = compare(AIChoice);
+		roundWinner = winner;
 		return winner;
 	}
 	
 	
 	
 	//Method to compare the cards that players drawn this round and find the winner. 
-	public Player compare(HashMap<Player, Card> cardThisRound, int choice){
+	public Player compare(int choice){
+		roundChoice = choice;
 	    int biggest = -1;
 	    int position = 0;
 	    Card biggestCard = null;
@@ -309,7 +336,11 @@ public class Game {
 	    	}
 	    }
 	    if(counter > 1) isDraw = true;
-		return biggestCard.getOwner();
+	   
+	    Player winner = biggestCard.getOwner();
+	    //System.out.println(winner.getName());
+	    roundWinner = winner;
+		return winner;
 	}
 	
 	//This method will get the players who have no cards out of the game. 

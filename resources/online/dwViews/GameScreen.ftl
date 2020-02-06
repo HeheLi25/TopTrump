@@ -22,6 +22,9 @@
         content="width+device-width,initial-scale=1"> 
         
         <style> 
+        .button {
+        	cursor: pointer;
+        }
         
         .buttons{
           background: #BCE1C2;
@@ -61,10 +64,11 @@
         border-radius: 15px; 
         rgba(0,0,0,0.2);
         width: 17%;
-        height:60%;
+        height:50%;
         display:inline-block;
         margin: 10px;
-        margin-top:40px;
+        margin-top:25px;
+        text-align:center;
         }
         
         .dropbox{
@@ -74,7 +78,7 @@
         width: 100px;
         }
         .image{
-        margin-top:15px;
+        margin-top:10px;
         width:100%;
        }
         .container { 
@@ -100,34 +104,39 @@
         </div>
         
         <div> 
-        <h4 class="header2" style="text-align:center";> <a id= "text2">The active player is YOU </a></h4>
+        <h4 class="header2" style="text-align:center";> <a id= "text2">The active player is Human Player </a></h4>
         </div>
         
         <div> 
              <p style="margin-top:10px";>  Choose Category: </p>
           </div>
        <div class="buttons"> 
-             <button class="buttons" onclick="humanChoice(0)">Attack</button>
+             <button id="category1" class="buttons" onclick="humanChoice(0)">Attack</button>
           </div>
         <div class="buttons"> 
-             <button class="buttons" onclick="humanChoice(1)">Size</button>
+             <button id="category2" class="buttons" onclick="humanChoice(1)">Size</button>
           </div>   
               <div class="buttons"> 
-             <button class="buttons" onclick="humanChoice(2)">Defence</button>
+             <button id="category3" class="buttons" onclick="humanChoice(2)">Defence</button>
           </div>   
           <div class="buttons"> 
-             <button class="buttons" onclick="humanChoice(3)">Speed</button>
+             <button id="category4" class="buttons" onclick="humanChoice(3)">Speed</button>
           </div> 
           <div class="buttons"> 
-             <button class="buttons" onclick="humanChoice(4)">HP</button>
+             <button id="category5" class="buttons" onclick="humanChoice(4)">HP</button>
+          </div>
+          <br>
+           <div> 
+             <button id="next" class="button" onclick="nextRound()">Next Round</button>&nbsp;
+             <button id="newGame" class="button" onclick="gameInit()">New Game</button>
           </div>
            
-    	<div class="card" id="humanPlayercard">
+    	<div id="HumanPlayer" class="card" style="">
     	   <div class="titleCard"> 
     	      <p class="titleCard"> YOU </p>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card0">
+    	      <img src="/assets/Pikachu.png" height="140" id="card0">
     	    </div>
     	       <div class="container"> 
     	       <h3 id="cardName0"></h3>
@@ -142,12 +151,12 @@
     	   </div>
     	</div>
     	
-    	<div class="card" id="AIPlayer1card">  
+    	<div class="card" id="AIPlayer1">  
     	<div class="titleCard"> 
     	      <p class="titleCard">AI Player 1 </p>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card1">
+    	      <img src="/assets/Pikachu.png"  height="140" id="card1">
     	    </div>
     	  <div class="container"> 
     	   <h3 id="cardName1"></h3>
@@ -162,12 +171,12 @@
     	   </div>
     	</div> 
     	
-    	<div class="card" id="AIPlayer2card"> 
+    	<div class="card" id="AIPlayer2"> 
     	<div class="titleCard"> 
     	      <p class="titleCard">AI Player 2 </p>
     	    </div>  
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card2">
+    	      <img src="/assets/Pikachu.png" height="140" id="card2">
     	    </div>
     	  <div class="container"> 
     	   <h3 id="cardName2"></h3>
@@ -182,12 +191,12 @@
     	   </div>
     	</div> 
     	
-    	<div class="card" id="AIPlayer3card">  
+    	<div class="card"  id="AIPlayer3">  
     	<div class="titleCard"> 
     	      <p class="titleCard">AI Player 3 </p>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card3">
+    	      <img src="/assets/Pikachu.png"  height="140" id="card3">
     	    </div>
     	  <div class="container"> 
     	   <h3 id="cardName3"></h3>
@@ -202,12 +211,12 @@
     	   </div>
     	</div> 
     	
-    	<div class="card" id="AIPlayer4card">  
+    	<div class="card"  id="AIPlayer4">  
     	<div class="titleCard"> 
     	      <p class="titleCard">AI Player 4 </p>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png" width="175" height="140" id="card4">
+    	      <img src="/assets/Pikachu.png"  height="140" id="card4">
     	    </div>
     	  <div class="container"> 
     	   <h3 id="cardName4"></h3>
@@ -225,11 +234,12 @@
    </div>
 		
 		<script type="text/javascript">
-		
+			var activePlayer = 0;//Globel variable, 0 is human player. 
+			var round = 1;
 			// Method that is called on page load
 			function initalize() {
 				gameInit();
-				humanStart();
+				
 				// --------------------------------------------------------------------------
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
@@ -239,11 +249,59 @@
 			}
 			function gameInit(){
 				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/gameInit");
+				round = 1;
+				xhr.onload = function(e){
+					cancelHighlightCards();
+					enableCategory();
+					$('#text1').text("Round:1 Players have drawn their cards");
+ 					$('#text2').text("The active player is Human Player");
+					
+					humanStart();
+				}
 				xhr.send();
+			}
+			function cancelHighlightCards(){
+				$("#HumanPlayer").css({'background-color': 'lightgrey'});
+				$("#AIPlayer1").css({'background-color': 'lightgrey'});
+				$("#AIPlayer2").css({'background-color': 'lightgrey'});
+				$("#AIPlayer3").css({'background-color': 'lightgrey'});
+				$("#AIPlayer4").css({'background-color': 'lightgrey'});
 			}
 			
 			function humanStart() {
 				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/roundStart"); // Request type and URL
+				hideAI();
+				cancelHighlightCards();
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; 
+ 					var parsedText = JSON.parse(responseText);
+ 					var i;
+ 					$('#text1').text("Round "+round+": Players have drawn their cards");
+ 					$('#text2').text("The active player is human player");
+ 					enableCategory();
+ 					for(i = 0; i < parsedText.length; i++){
+ 						
+ 						document.getElementById("next").disabled = true;
+ 						$('#cardName'+i).text(parsedText[i].description);
+ 						$('#card'+i).attr('src',"/assets/"+parsedText[i].description+".png");
+ 						$('#attributeOne'+i).text("Attack:"+parsedText[i].attribute0);
+ 						$('#attributeTwo'+i).text("Size:"+parsedText[i].attribute1);
+ 						$('#attributeThree'+i).text("Defence:"+parsedText[i].attribute2);
+ 						$('#attributeFour'+i).text("Speed:"+parsedText[i].attribute3);
+ 						$('#attributeFive'+i).text("HP:"+parsedText[i].attribute4);
+ 					}
+				};
+				xhr.send();		
+			}
+			function nextRound(){
+				if(activePlayer == 0){
+					humanStart();
+				}else{
+					showCards();
+				}
+			}
+			function showCards(){
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/roundStart");
 				xhr.onload = function(e) {
  					var responseText = xhr.response; 
  					var parsedText = JSON.parse(responseText);
@@ -257,12 +315,89 @@
  						$('#attributeFour'+i).text("Speed:"+parsedText[i].attribute3);
  						$('#attributeFive'+i).text("HP:"+parsedText[i].attribute4);
  					}
+ 					AIRound();
 				};
-				xhr.send();		
+				xhr.send();	
+			}
+			
+ 			function AIRound(){
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/AIRound");
+				cancelHighlightCards();
+				
+				xhr.onload = function(e){
+					var responseText = xhr.response;
+					var parsedText = JSON.parse(responseText);
+ 					showAI();
+ 					$('#text1').text("Round "+parsedText.round+": The winner is "+parsedText.winner);
+ 					$('#text2').text("You now have "+parsedText.humanCards +" cards");
+ 					if(parsedText.winner == "Human Player"){
+ 						activePlayer = 0;
+ 						$("#HumanPlayer").css({'background-color': '#B1E8FF'});
+ 						//Start another round that the active player is human player.
+ 					}else{
+ 						activePlayer = -1;//Means the active player is not the human.
+ 						if(parsedText.winner == "AI Player 1"){$("#AIPlayer1").css({'background-color': '#B1E8FF'});}
+ 						if(parsedText.winner == "AI Player 2"){$("#AIPlayer2").css({'background-color': '#B1E8FF'});}
+ 						if(parsedText.winner == "AI Player 3"){$("#AIPlayer3").css({'background-color': '#B1E8FF'});}
+ 						if(parsedText.winner == "AI Player 4"){$("#AIPlayer4").css({'background-color': '#B1E8FF'});}
+ 					}
+ 					round = round+1;
+				};
+				xhr.send();
+			} 
+				
+
+			
+			function hideAI(){
+				document.getElementById("AIPlayer1").style.visibility = "hidden";
+				document.getElementById("AIPlayer2").style.visibility = "hidden";
+				document.getElementById("AIPlayer3").style.visibility = "hidden";
+				document.getElementById("AIPlayer4").style.visibility = "hidden";
+			}
+			function showAI(){
+				document.getElementById("AIPlayer1").style.visibility = "visible";
+				document.getElementById("AIPlayer2").style.visibility = "visible";
+				document.getElementById("AIPlayer3").style.visibility = "visible";
+				document.getElementById("AIPlayer4").style.visibility = "visible";
+			}
+			function disableCategory(){
+				document.getElementById("category1").disabled = true;
+				document.getElementById("category2").disabled = true;
+				document.getElementById("category3").disabled = true;
+				document.getElementById("category4").disabled = true;
+				document.getElementById("category5").disabled = true;
+			}
+			function enableCategory(){
+				document.getElementById("category1").disabled = false;
+				document.getElementById("category2").disabled = false;
+				document.getElementById("category3").disabled = false;
+				document.getElementById("category4").disabled = false;
+				document.getElementById("category5").disabled = false;
 			}
 			
 			function humanChoice(choice){
-				
+				var xhr =  createCORSRequest('GET', "http://localhost:7777/toptrumps/humanChoice?choice="+choice);
+				showAI();
+				document.getElementById("next").disabled = false;
+				xhr.onload = function(e){
+					var responseText = xhr.response; 
+					disableCategory();
+ 					var parsedText = JSON.parse(responseText);
+ 					$('#text1').text("Round "+parsedText.round+": The winner is "+parsedText.winner);
+ 					$('#text2').text("You now have "+parsedText.humanCards +" cards");
+ 					if(parsedText.winner == "Human Player"){
+ 						activePlayer = 0;
+ 						$("#HumanPlayer").css({'background-color': '#B1E8FF'});
+ 					}else{
+ 						activePlayer = -1;
+ 						if(parsedText.winner == "AI Player 1"){$("#AIPlayer1").css({'background-color': '#B1E8FF'});}
+ 						if(parsedText.winner == "AI Player 2"){$("#AIPlayer2").css({'background-color': '#B1E8FF'});}
+ 						if(parsedText.winner == "AI Player 3"){$("#AIPlayer3").css({'background-color': '#B1E8FF'});}
+ 						if(parsedText.winner == "AI Player 4"){$("#AIPlayer4").css({'background-color': '#B1E8FF'});}
+ 					}
+ 					round = round+1;
+				};
+				xhr.send();
 			}
 			
 

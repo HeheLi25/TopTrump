@@ -15,6 +15,7 @@ import javax.ws.rs.core.MediaType;
 
 import online.configuration.TopTrumpsJSONConfiguration;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
@@ -22,6 +23,7 @@ import database.DBConnect;
 import model.Card;
 import model.CardBuffer;
 import model.Game;
+import model.GameBuffer;
 import model.Player;
 
 @Path("/toptrumps") // Resources specified here should be hosted at http://localhost:7777/toptrumps
@@ -85,9 +87,7 @@ public class TopTrumpsRESTAPI {
 	@Path("/gameInit")
 	public void gameInit() throws Exception{
 		model.gameInit();
-	}
-
-	
+	}	
 	@GET
 	@Path("/roundStart")
 	public String roundStart() throws Exception{
@@ -103,12 +103,22 @@ public class TopTrumpsRESTAPI {
 		}
 		return oWriter.writeValueAsString(cardBuffers);
 	}
+	@GET
+	@Path("/AIRound")
+	public String AIRound() throws Exception{
+		model.AIPlayerRound();
+		model.endRound();
+		GameBuffer gb = model.toGameBuffer();
+		return oWriter.writeValueAsString(gb);
+	}
 	
 	@GET
 	@Path("/humanChoice")
-	public void humanChoice(@QueryParam("choice") int choice) {
-		HashMap<Player,Card> cards = model.getCardThisRound();
-		Player winner = model.compare(cards, choice);
+	public String humanChoice(@QueryParam("choice") int choice) throws Exception {
+		model.compare(choice);
+		model.endRound();
+		GameBuffer gb = model.toGameBuffer();
+		return oWriter.writeValueAsString(gb);
 	}
 
 	
