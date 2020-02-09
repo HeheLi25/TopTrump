@@ -273,6 +273,8 @@ public class Game {
 		gb.AI2InGame = players[2].isInGame();
 		gb.AI3InGame = players[3].isInGame();
 		gb.AI4InGame = players[4].isInGame();
+		gb.howManyAlive = howManyAlive;
+		gb.roundChoice = roundChoice;
 		
 		return gb;
 	}

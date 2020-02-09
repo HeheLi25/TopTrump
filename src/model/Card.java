@@ -78,7 +78,7 @@ public class Card {
 
 	}
 	public CardBuffer toCardBuffer() {
-		CardBuffer cb = new CardBuffer(description, data[0],data[1],data[2],data[3],data[4]);
+		CardBuffer cb = new CardBuffer(description, data[0],data[1],data[2],data[3],data[4],owner.getName());
 		return cb;
 	}
 

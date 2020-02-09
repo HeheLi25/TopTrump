@@ -133,7 +133,7 @@
            
     	<div id="HumanPlayer" class="card" style="">
     	   <div class="titleCard"> 
-    	      <p class="titleCard"> YOU </p>
+    	      <a class="titleCard" id="titleCard0"> YOU </a>
     	    </div> 
     	    <div class="image">
     	      <img src="/assets/Pikachu.png" height="140" id="card0">
@@ -153,7 +153,7 @@
     	
     	<div class="card" id="AIPlayer1">  
     	<div class="titleCard"> 
-    	      <p class="titleCard">AI Player 1 </p>
+    	      <a class="titleCard" id="titleCard1">AI Player 1 </a>
     	    </div> 
     	    <div class="image">
     	      <img src="/assets/Pikachu.png"  height="140" id="card1">
@@ -173,7 +173,7 @@
     	
     	<div class="card" id="AIPlayer2"> 
     	<div class="titleCard"> 
-    	      <p class="titleCard">AI Player 2 </p>
+    	      <a class="titleCard" id="titleCard2">AI Player 2 </a>
     	    </div>  
     	    <div class="image">
     	      <img src="/assets/Pikachu.png" height="140" id="card2">
@@ -193,7 +193,7 @@
     	
     	<div class="card"  id="AIPlayer3">  
     	<div class="titleCard"> 
-    	      <p class="titleCard">AI Player 3 </p>
+    	      <a class="titleCard" id="titleCard3">AI Player 3 </a>
     	    </div> 
     	    <div class="image">
     	      <img src="/assets/Pikachu.png"  height="140" id="card3">
@@ -213,7 +213,7 @@
     	
     	<div class="card"  id="AIPlayer4">  
     	<div class="titleCard"> 
-    	      <p class="titleCard">AI Player 4 </p>
+    	      <a class="titleCard" id="titleCard4">AI Player 4 </a>
     	    </div> 
     	    <div class="image">
     	      <img src="/assets/Pikachu.png"  height="140" id="card4">
@@ -267,98 +267,18 @@
 				$("#AIPlayer3").css({'background-color': 'lightgrey'});
 				$("#AIPlayer4").css({'background-color': 'lightgrey'});
 			}
-			
-			function humanStart() {
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/roundStart"); // Request type and URL
-				hideAI();
-				cancelHighlightCards();
-				xhr.onload = function(e) {
- 					var responseText = xhr.response; 
- 					var parsedText = JSON.parse(responseText);
- 					var i;
- 					$('#text1').text("Round "+round+": Players have drawn their cards");
- 					$('#text2').text("The active player is human player");
- 					enableCategory();
- 					for(i = 0; i < parsedText.length; i++){
- 						
- 						document.getElementById("next").disabled = true;
- 						$('#cardName'+i).text(parsedText[i].description);
- 						$('#card'+i).attr('src',"/assets/"+parsedText[i].description+".png");
- 						$('#attributeOne'+i).text("Attack:"+parsedText[i].attribute0);
- 						$('#attributeTwo'+i).text("Size:"+parsedText[i].attribute1);
- 						$('#attributeThree'+i).text("Defence:"+parsedText[i].attribute2);
- 						$('#attributeFour'+i).text("Speed:"+parsedText[i].attribute3);
- 						$('#attributeFive'+i).text("HP:"+parsedText[i].attribute4);
- 					}
-				};
-				xhr.send();		
-			}
-			function nextRound(){
-				if(activePlayer == 0){
-					humanStart();
-				}else{
-					showCards();
-				}
-			}
-			function showCards(){
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/roundStart");
-				xhr.onload = function(e) {
- 					var responseText = xhr.response; 
- 					var parsedText = JSON.parse(responseText);
- 					var i;
- 					for(i = 0; i < parsedText.length; i++){
- 						$('#cardName'+i).text(parsedText[i].description);
- 						$('#card'+i).attr('src',"/assets/"+parsedText[i].description+".png");
- 						$('#attributeOne'+i).text("Attack:"+parsedText[i].attribute0);
- 						$('#attributeTwo'+i).text("Size:"+parsedText[i].attribute1);
- 						$('#attributeThree'+i).text("Defence:"+parsedText[i].attribute2);
- 						$('#attributeFour'+i).text("Speed:"+parsedText[i].attribute3);
- 						$('#attributeFive'+i).text("HP:"+parsedText[i].attribute4);
- 					}
- 					AIRound();
-				};
-				xhr.send();	
-			}
-			
- 			function AIRound(){
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/AIRound");
-				cancelHighlightCards();
-				
-				xhr.onload = function(e){
-					var responseText = xhr.response;
-					var parsedText = JSON.parse(responseText);
- 					showAI();
- 					$('#text1').text("Round "+parsedText.round+": The winner is "+parsedText.winner);
- 					$('#text2').text("You now have "+parsedText.humanCards +" cards");
- 					if(parsedText.winner == "Human Player"){
- 						activePlayer = 0;
- 						$("#HumanPlayer").css({'background-color': '#B1E8FF'});
- 						//Start another round that the active player is human player.
- 					}else{
- 						activePlayer = -1;//Means the active player is not the human.
- 						if(parsedText.winner == "AI Player 1"){$("#AIPlayer1").css({'background-color': '#B1E8FF'});}
- 						if(parsedText.winner == "AI Player 2"){$("#AIPlayer2").css({'background-color': '#B1E8FF'});}
- 						if(parsedText.winner == "AI Player 3"){$("#AIPlayer3").css({'background-color': '#B1E8FF'});}
- 						if(parsedText.winner == "AI Player 4"){$("#AIPlayer4").css({'background-color': '#B1E8FF'});}
- 					}
- 					round = round+1;
-				};
-				xhr.send();
-			} 
-				
-
-			
 			function hideAI(){
 				document.getElementById("AIPlayer1").style.visibility = "hidden";
 				document.getElementById("AIPlayer2").style.visibility = "hidden";
 				document.getElementById("AIPlayer3").style.visibility = "hidden";
 				document.getElementById("AIPlayer4").style.visibility = "hidden";
 			}
-			function showAI(){
-				document.getElementById("AIPlayer1").style.visibility = "visible";
-				document.getElementById("AIPlayer2").style.visibility = "visible";
-				document.getElementById("AIPlayer3").style.visibility = "visible";
-				document.getElementById("AIPlayer4").style.visibility = "visible";
+			function showAI(parsedText){
+				if(parsedText.AI1InGame)document.getElementById("AIPlayer1").style.visibility = "visible";
+				if(parsedText.AI2InGame)document.getElementById("AIPlayer2").style.visibility = "visible";
+				if(parsedText.AI3InGame)document.getElementById("AIPlayer3").style.visibility = "visible";
+				if(parsedText.AI4InGame)document.getElementById("AIPlayer4").style.visibility = "visible";
+				
 			}
 			function disableCategory(){
 				document.getElementById("category1").disabled = true;
@@ -375,30 +295,196 @@
 				document.getElementById("category5").disabled = false;
 			}
 			
+			function humanStart() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/roundStart"); // Request type and URL
+				hideAI();
+				cancelHighlightCards();
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; 
+ 					var parsedText = JSON.parse(responseText);
+ 					var i;
+ 					$('#text1').text("Round "+round+": Players have drawn their cards");
+ 					$('#text2').text("The active player is human player");
+ 					enableCategory();
+ 					document.getElementById("next").disabled = true;
+ 					showCards(parsedText);
+				};
+				xhr.send();		
+			}
+			function nextRound(){
+				if(activePlayer == 0){
+					humanStart();
+				}else{
+					AIStart();
+				}
+			}
+			/*This method is called when a round of AI starts*/
+			function AIStart(){
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/roundStart");
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; 
+ 					var parsedText = JSON.parse(responseText);
+					showCards(parsedText);
+ 					AIRound();
+				};
+				xhr.send();	
+			}
+			
+			/*This method is called to put the cards(which are drawn by the players this round) on the right position. */
+			function showCards(parsedText){
+					var i;
+ 					var j;
+ 					var AI1 = false, AI2 = false, AI3 = false, AI4 = false, human = false;
+ 					//alert(parsedText.length);
+ 					for(j = 0; j < parsedText.length; j++){
+ 						var owner = parsedText[j].owner;
+ 						if(owner == "Human Player"){
+ 							i = 0;
+ 							human = true;
+ 						}
+ 						else if(owner == "AI Player 1"){
+ 							i = 1;
+ 							AI1 = true;
+ 						}
+ 						else if(owner == "AI Player 2"){
+ 							i = 2;
+ 							AI2 = true;
+ 						}
+ 						else if(owner == "AI Player 3"){
+ 							i = 3;
+ 							AI3 = true;
+ 						}
+ 						else if(owner == "AI Player 4"){
+ 							i = 4;
+ 							AI4 = true;
+ 						}
+ 						$('#cardName'+i).text(parsedText[j].description);
+ 						$('#card'+i).attr('src',"/assets/"+parsedText[j].description+".png");
+ 						$('#attributeOne'+i).text("Attack:"+parsedText[j].attribute0);
+ 						$('#attributeTwo'+i).text("Size:"+parsedText[j].attribute1);
+ 						$('#attributeThree'+i).text("Defence:"+parsedText[j].attribute2);
+ 						$('#attributeFour'+i).text("Speed:"+parsedText[j].attribute3);
+ 						$('#attributeFive'+i).text("HP:"+parsedText[j].attribute4);
+ 					}
+ 					if(!human){
+ 						alert("Game over, you lose.");
+ 						endGameAuto();
+ 						 window.history.back(-1);   
+ 					}
+ 					if(!AI1) document.getElementById("AIPlayer1").style.visibility = "hidden";
+ 					if(!AI2) document.getElementById("AIPlayer2").style.visibility = "hidden";
+ 					if(!AI3) document.getElementById("AIPlayer3").style.visibility = "hidden";
+ 					if(!AI4) document.getElementById("AIPlayer4").style.visibility = "hidden";
+ 					if(human&&parsedText.length==1){
+ 						alert("Congrats! You win.");
+ 						 window.history.back(-1);   
+ 					}
+			}
+			
+			//function [AIStart] calls this function to execute the AI round. 
+ 			function AIRound(){
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/AIRound");
+				cancelHighlightCards();
+				
+				xhr.onload = function(e){
+					var responseText = xhr.response;
+					var parsedText = JSON.parse(responseText);
+ 					if(parsedText.isDraw){
+ 						handleDraw(parsedText);
+ 					}else{
+ 						handleResult(parsedText);
+ 					}
+				};
+				xhr.send();
+			} 
+			
+			/*When the human player choose a category, this function handles it.*/
 			function humanChoice(choice){
 				var xhr =  createCORSRequest('GET', "http://localhost:7777/toptrumps/humanChoice?choice="+choice);
-				showAI();
+				
 				document.getElementById("next").disabled = false;
 				xhr.onload = function(e){
 					var responseText = xhr.response; 
 					disableCategory();
  					var parsedText = JSON.parse(responseText);
- 					$('#text1').text("Round "+parsedText.round+": The winner is "+parsedText.winner);
- 					$('#text2').text("You now have "+parsedText.humanCards +" cards");
- 					if(parsedText.winner == "Human Player"){
- 						activePlayer = 0;
- 						$("#HumanPlayer").css({'background-color': '#B1E8FF'});
+ 					showAI(parsedText);
+ 					if(parsedText.isDraw){
+ 						handleDraw(parsedText);
  					}else{
- 						activePlayer = -1;
- 						if(parsedText.winner == "AI Player 1"){$("#AIPlayer1").css({'background-color': '#B1E8FF'});}
- 						if(parsedText.winner == "AI Player 2"){$("#AIPlayer2").css({'background-color': '#B1E8FF'});}
- 						if(parsedText.winner == "AI Player 3"){$("#AIPlayer3").css({'background-color': '#B1E8FF'});}
- 						if(parsedText.winner == "AI Player 4"){$("#AIPlayer4").css({'background-color': '#B1E8FF'});}
+ 						handleResult(parsedText);
  					}
- 					round = round+1;
 				};
 				xhr.send();
 			}
+			
+			/*This method handles the result of a round, highlight the wining card.*/
+			function handleResult(parsedText){
+				var winCategory;
+					showAI(parsedText);
+					switch(parsedText.roundChoice){
+					case 0:
+						winCategory = "Attack";
+						break;
+					case 1:
+						winCategory = "Size";
+						break;
+					case 2:
+						winCategory = "Defence";
+						break;
+					case 3:
+						winCategory = "Speed";
+						break;
+					case 4:
+						winCategory = "HP";
+						break;
+					}
+					$('#text1').text("Round "+parsedText.round+": "+parsedText.winner+" wins with "+winCategory);
+					$('#text2').text("You now have "+parsedText.humanCards +" cards");
+					if(parsedText.winner == "Human Player"){
+						activePlayer = 0;
+						$("#HumanPlayer").css({'background-color': '#B1E8FF'});
+						//Start another round that the active player is human player.
+					}else{
+						activePlayer = -1;//Means the active player is not the human.
+						if(parsedText.winner == "AI Player 1"){$("#AIPlayer1").css({'background-color': '#B1E8FF'});}
+						if(parsedText.winner == "AI Player 2"){$("#AIPlayer2").css({'background-color': '#B1E8FF'});}
+						if(parsedText.winner == "AI Player 3"){$("#AIPlayer3").css({'background-color': '#B1E8FF'});}
+						if(parsedText.winner == "AI Player 4"){$("#AIPlayer4").css({'background-color': '#B1E8FF'});}
+					}
+					round = round+1;
+			}
+						
+			//States that a draw happens. Show the category that cause the draw.
+			function handleDraw(parsedText){
+				var winCategory;
+				switch(parsedText.roundChoice){
+				case 0:
+					winCategory = "Attack";
+					break;
+				case 1:
+					winCategory = "Size";
+					break;
+				case 2:
+					winCategory = "Defence";
+					break;
+				case 3:
+					winCategory = "Speed";
+					break;
+				case 4:
+					winCategory = "HP";
+					break;
+				}
+				$('#text1').text("Round "+parsedText.round+": This round was a Draw for "+winCategory);
+				$('#text2').text("Common pile now have "+parsedText.commonPile +" cards");
+				showAI();
+			}
+			//After the human player is out, the AIs end the game automatically so the result will be recorded. 
+			function endGameAuto(){
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/endGameAuto"); // Request type and URL	
+				xhr.send();		
+			}
+				
+			
 			
 
 			

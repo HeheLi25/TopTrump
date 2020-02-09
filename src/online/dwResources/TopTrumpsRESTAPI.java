@@ -94,12 +94,14 @@ public class TopTrumpsRESTAPI {
 		model.roundInit();
 		model.playersDrawCard();
 		HashMap<Player,Card> cards = model.getCardThisRound();
-		int size = cards.size();
 		List<CardBuffer> cardBuffers = new ArrayList<CardBuffer>();
-		for(int i = 0; i < size; i++) {
-			Card c = cards.get(model.getPlayers()[i]);
-			CardBuffer cb = c.toCardBuffer();
-			cardBuffers.add(cb);
+		for(int i = 0; i < 5; i++) {
+			if(model.getPlayers()[i].isInGame()) {
+				Card c = cards.get(model.getPlayers()[i]);
+				CardBuffer cb = c.toCardBuffer();
+				cardBuffers.add(cb);
+				
+			}
 		}
 		return oWriter.writeValueAsString(cardBuffers);
 	}
@@ -119,6 +121,14 @@ public class TopTrumpsRESTAPI {
 		model.endRound();
 		GameBuffer gb = model.toGameBuffer();
 		return oWriter.writeValueAsString(gb);
+	}
+	
+	@GET
+	@Path("/endGameAuto")
+	public void endGameAuto() {
+		while(model.isInGame()){
+			model.oneRound();
+		}
 	}
 
 	
