@@ -12,6 +12,7 @@ import online.dwResources.TopTrumpsRESTAPI;
 
 import org.eclipse.jetty.servlets.CrossOriginFilter;
 
+import database.DBConnect;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
@@ -30,6 +31,7 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		DBConnect.checkTable();
 		try {
 			new TopTrumpsOnlineApplication().run(args); // Create a new online application and run it
 		} catch (Exception e) {e.printStackTrace();}
