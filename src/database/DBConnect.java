@@ -11,9 +11,15 @@ import java.sql.Statement;
  */
 public class DBConnect {
 	private final String DBDRIVER = "org.postgresql.Driver";
+	
+//	private final String DBURL = "jdbc:postgresql://localhost:5432/postgres";
+//	private final String DBUSER = "postgres";
+//	private final String DBPASSWORD = "000625";
+	
 	private final String DBURL = "jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/m_19_2458304l";
 	private final String DBUSER = "m_19_2458304l";
 	private final String DBPASSWORD = "2458304l";
+	
 	private Connection conn = null;
 
 	public DBConnect() {
@@ -49,7 +55,7 @@ public class DBConnect {
 			// exception.
 			rs.close();
 		} catch (Exception e) {
-			System.out.println("Database table created.");
+			System.out.println("Trying to create table...");
 			try {
 				stmt = conn.getConnection().createStatement();
 				String s = "CREATE TABLE POKEMON(" + "number_of_games INT DEFAULT 0,"
@@ -61,8 +67,7 @@ public class DBConnect {
 				stmt.executeUpdate(s);
 				stmt.close();
 			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				System.out.println("Unable to create table.");
 			}
 		} finally {
 			conn.close();

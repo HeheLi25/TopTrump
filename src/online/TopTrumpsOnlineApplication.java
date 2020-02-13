@@ -31,7 +31,6 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		DBConnect.checkTable();
 		try {
 			new TopTrumpsOnlineApplication().run(args); // Create a new online application and run it
 		} catch (Exception e) {e.printStackTrace();}
