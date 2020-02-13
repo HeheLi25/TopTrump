@@ -58,15 +58,15 @@
     	  
       
     <div class="stats">
-       <p class="stats">No. of games: <a id="numofgames"></a></p> 
+       <p class="stats">Games: <a id="numofgames"></a></p> 
      </div> 
      
     <div class="stats">
-       <p class="stats"> No. of human wins: <a id="numofhumanwins"></a></p> 
+       <p class="stats"> Human wins: <a id="numofhumanwins"></a></p> 
      </div> 
      
       <div class="stats">
-       <p class="stats"> No. of AI wins: <a id="numofaiwins"></a></p> 
+       <p class="stats"> AI wins: <a id="numofaiwins"></a></p> 
      </div> 
      
       <div class="stats">

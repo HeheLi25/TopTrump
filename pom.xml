@@ -3,6 +3,7 @@
   <groupId>A1Hackathon</groupId>
   <artifactId>MScIT2020Project</artifactId>
   <version>1.0</version>
+  <packaging>jar</packaging>
   <name>Top Trumps Application Project</name>
   <description>This is the Top-Trumps project of the Group A1-Hackathon. </description>
   
@@ -34,9 +35,9 @@
 	<!-- One of the requirements is to save results in a (mysql) database, so lets import the
 	     database connection driver libruary for that as well -->
 	<dependency>
-    	<groupId>mysql</groupId>
-    	<artifactId>mysql-connector-java</artifactId>
-    	<version>5.1.38</version>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.38</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/io.dropwizard/dropwizard-assets -->
 	<dependency>
@@ -44,6 +45,13 @@
 		<artifactId>dropwizard-assets</artifactId>
 		<version>${dropwizard.version}</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
+	<dependency>
+		<groupId>postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>9.1-901-1.jdbc4</version>
+	</dependency>
+	
 	
     
   </dependencies>
