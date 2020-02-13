@@ -34,7 +34,7 @@ public class TopTrumpsCLIApplication {
 			// ----------------------------------------------------
 				System.out.println("Do you want to see past results or play a game?");
 				System.out.println("1: Print Game Statistics"+
-					   "\n2: Play game");
+					   "\n2: Play game\n3: Quit");
 					   
 				System.out.println("Enter the number for your selection:");
 				int userInput = s.nextInt();
@@ -45,6 +45,8 @@ public class TopTrumpsCLIApplication {
 					}
 				}else if(userInput == 1){
 					seeStatistics(System.out);
+				}else if(userInput == 3) {
+					userWantsToQuit=true;
 				}else{
 					System.out.println("Please input a valid number.");
 				}

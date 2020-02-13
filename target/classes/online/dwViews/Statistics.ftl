@@ -35,7 +35,7 @@
          border:none;
          dispay:inline-block;
          margin:auto;
-         margin-top:5px;
+         margin-top:55px;
          cursor:pointer;
          }
          
@@ -44,8 +44,8 @@
         font-size:20;
         font-family:simplifica;
         display:inline-block;
-        margin-right: 45px;
-        margin-top:150px;
+        margin-right: 34px;
+        margin-top:80px;
         }
          
        </style>

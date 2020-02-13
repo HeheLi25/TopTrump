@@ -64,7 +64,7 @@
         border-radius: 15px; 
         rgba(0,0,0,0.2);
         width: 17%;
-        height:50%;
+        height:57%;
         display:inline-block;
         margin: 10px;
         margin-top:25px;
@@ -91,7 +91,7 @@
         
 	</head>
 
-    <body onload="initalize()"; style="background-image:url('/assets/background2.png'); background-size:85%;"> <!-- Call the initalize method when the page loads -->
+    <body onload="initalize()"; style="background-image:url('/assets/background2.png'); background-size: 100% 100%";> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
     	
