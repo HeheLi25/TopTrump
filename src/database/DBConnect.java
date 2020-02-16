@@ -165,6 +165,26 @@ public class DBConnect {
 		}
 		return result;
 	}
+	public static void storeGameResult(int s0, int s1, int s2, int s3, int s4, int draw, int round, String winner) {
+		DBConnect db = new DBConnect();
+		ResultSet rs = null;
+		Statement stmt = null;
+		try {
+			stmt = db.getConnection().createStatement();
+			rs = stmt.executeQuery("select max(game_id) from games");
+			rs.next();
+			int gameID = rs.getInt("max")+1;
+			stmt = db.getConnection().createStatement();
+			stmt.executeUpdate("insert into games(game_id,human_score,ai1_score,ai2_score,ai3_score,ai4_score,num_of_draws,num_of_rounds,winner)"
+						+ "values("+gameID+","+s0+","+s1+","+s2+","+s3+","+s4+","+draw+","+round+",'"+winner+"')");
+			rs.close();
+			stmt.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			db.close();
+		}
+	}
 
 	public void close() {
 		try {

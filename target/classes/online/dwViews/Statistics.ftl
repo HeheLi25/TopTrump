@@ -42,9 +42,10 @@
          .stats { 
         background:Transparent;
         font-size:20;
+	font-weight: bold;
         font-family:simplifica;
         display:inline-block;
-        margin-right: 34px;
+        margin-right: 30px;
         margin-top:80px;
         }
          
@@ -58,7 +59,7 @@
     	  
       
     <div class="stats">
-       <p class="stats">Games: <a id="numofgames"></a></p> 
+       <p class="stats">Games played: <a id="numofgames"></a></p> 
      </div> 
      
     <div class="stats">
@@ -74,7 +75,7 @@
      </div> 
      
       <div class="stats">
-       <p class="stats">Longest round: <a id="longestgame"></a></p> 
+       <p class="stats"> Longest game-rounds: <a id="longestgame"></a></p> 
      </div> 
 
      

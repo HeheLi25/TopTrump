@@ -21,11 +21,11 @@ public class TopTrumps {
 		
 		// check the command line for what switches are active
 		for (String arg : args) {
-			try {
-				DBConnect.checkTable();
-			}catch(Exception e) {
-				System.out.println("Unable to create table.");
-			}
+//			try {
+//				DBConnect.checkTable();
+//			}catch(Exception e) {
+//				System.out.println("Unable to create table.");
+//			}
 			if (arg.equalsIgnoreCase("-t")) printTestLog=true;
 			if (arg.equalsIgnoreCase("-c")) commandLineMode=true;
 			if (arg.equalsIgnoreCase("-o")) onlineMode=true;

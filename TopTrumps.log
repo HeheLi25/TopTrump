@@ -1,0 +1,3169 @@
+The deck has been read and built.
+
+Bulbasaur
+Ivysaur
+Venusaur
+Charmander
+Charmeleon
+Charizard
+Squirtle
+Wartortle
+Blastoise
+Caterpie
+Metapod
+Butterfree
+Weedle
+Kakuna
+Beedrill
+Pidgey
+Pidgeotto
+Pidgeot
+Rattata
+Raticate
+Spearow
+Fearow
+Ekans
+Arbok
+Pikachu
+Raichu
+Sandshrew
+Sandslash
+Nidoran(F)
+Nidorina
+Nidoqueen
+Nidoran(M)
+Nidorino
+Nidoking
+Clefairy
+Clefable
+Vulpix
+Ninetales
+Jigglypuff
+Wigglytuff
+-------------------------
+The deck was shuffled.
+
+Raticate
+Kakuna
+Sandslash
+Pidgey
+Ninetales
+Nidorina
+Caterpie
+Nidorino
+Vulpix
+Fearow
+Nidoqueen
+Charizard
+Rattata
+Bulbasaur
+Raichu
+Venusaur
+Blastoise
+Butterfree
+Sandshrew
+Wartortle
+Pikachu
+Beedrill
+Nidoran(M)
+Squirtle
+Pidgeotto
+Wigglytuff
+Clefairy
+Clefable
+Metapod
+Spearow
+Charmeleon
+Charmander
+Arbok
+Nidoran(F)
+Ivysaur
+Nidoking
+Pidgeot
+Weedle
+Jigglypuff
+Ekans
+
+-------------------------
+Cards has been distributed.
+
+-----Human Player-----
+Raticate
+Kakuna
+Sandslash
+Pidgey
+Ninetales
+Nidorina
+Caterpie
+Nidorino
+-----AI Player 1-----
+Vulpix
+Fearow
+Nidoqueen
+Charizard
+Rattata
+Bulbasaur
+Raichu
+Venusaur
+-----AI Player 2-----
+Blastoise
+Butterfree
+Sandshrew
+Wartortle
+Pikachu
+Beedrill
+Nidoran(M)
+Squirtle
+-----AI Player 3-----
+Pidgeotto
+Wigglytuff
+Clefairy
+Clefable
+Metapod
+Spearow
+Charmeleon
+Charmander
+-----AI Player 4-----
+Arbok
+Nidoran(F)
+Ivysaur
+Nidoking
+Pidgeot
+Weedle
+Jigglypuff
+Ekans
+
+-------------------------
+
+The Human Player choose number 3
+
+-------------------------
+Round 1: Cards on the table:
+
+'Arbok':
+   > Size      :  2
+   > Attack    :  3
+   > Defense   :  4
+   > Speed     :  6
+   > HP        :  2
+
+'Raticate':
+   > Size      : 10
+   > Attack    :  6
+   > Defense   :  1
+   > Speed     :  7
+   > HP        :  1
+
+'Pidgeotto':
+   > Size      :  5
+   > Attack    :  4
+   > Defense   :  1
+   > Speed     :  9
+   > HP        :  5
+
+'Vulpix':
+   > Size      :  9
+   > Attack    :  5
+   > Defense   : 10
+   > Speed     :  5
+   > HP        :  8
+
+'Blastoise':
+   > Size      :  1
+   > Attack    :  4
+   > Defense   :  7
+   > Speed     :  5
+   > HP        :  5
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 1: AI Player 1
+
+-------------------------
+After round 1
+
+---Human Player 's deck---
+Kakuna
+Sandslash
+Pidgey
+Ninetales
+Nidorina
+Caterpie
+Nidorino
+---AI Player 1 's deck---
+Fearow
+Nidoqueen
+Charizard
+Rattata
+Bulbasaur
+Raichu
+Venusaur
+Vulpix
+Blastoise
+Pidgeotto
+Arbok
+Raticate
+---AI Player 2 's deck---
+Butterfree
+Sandshrew
+Wartortle
+Pikachu
+Beedrill
+Nidoran(M)
+Squirtle
+---AI Player 3 's deck---
+Wigglytuff
+Clefairy
+Clefable
+Metapod
+Spearow
+Charmeleon
+Charmander
+---AI Player 4 's deck---
+Nidoran(F)
+Ivysaur
+Nidoking
+Pidgeot
+Weedle
+Jigglypuff
+Ekans
+
+-------------------------
+
+The AI Player 1 choose number 3
+
+-------------------------
+Round 2: Cards on the table:
+
+'Nidoran(F)':
+   > Size      :  9
+   > Attack    :  2
+   > Defense   :  8
+   > Speed     :  2
+   > HP        :  0
+
+'Kakuna':
+   > Size      :  9
+   > Attack    :  9
+   > Defense   :  1
+   > Speed     :  2
+   > HP        :  0
+
+'Wigglytuff':
+   > Size      :  0
+   > Attack    :  9
+   > Defense   :  7
+   > Speed     :  5
+   > HP        :  9
+
+'Fearow':
+   > Size      :  7
+   > Attack    :  6
+   > Defense   : 10
+   > Speed     :  3
+   > HP        : 10
+
+'Butterfree':
+   > Size      :  7
+   > Attack    :  6
+   > Defense   :  1
+   > Speed     :  7
+   > HP        :  5
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 2: AI Player 1
+
+-------------------------
+After round 2
+
+---Human Player 's deck---
+Sandslash
+Pidgey
+Ninetales
+Nidorina
+Caterpie
+Nidorino
+---AI Player 1 's deck---
+Nidoqueen
+Charizard
+Rattata
+Bulbasaur
+Raichu
+Venusaur
+Vulpix
+Blastoise
+Pidgeotto
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Sandshrew
+Wartortle
+Pikachu
+Beedrill
+Nidoran(M)
+Squirtle
+---AI Player 3 's deck---
+Clefairy
+Clefable
+Metapod
+Spearow
+Charmeleon
+Charmander
+---AI Player 4 's deck---
+Ivysaur
+Nidoking
+Pidgeot
+Weedle
+Jigglypuff
+Ekans
+
+-------------------------
+
+The AI Player 1 choose number 5
+
+-------------------------
+Round 3: Cards on the table:
+
+'Ivysaur':
+   > Size      :  5
+   > Attack    : 10
+   > Defense   :  0
+   > Speed     :  0
+   > HP        :  6
+
+'Sandslash':
+   > Size      : 10
+   > Attack    :  0
+   > Defense   : 10
+   > Speed     :  1
+   > HP        : 10
+
+'Clefairy':
+   > Size      :  8
+   > Attack    :  4
+   > Defense   :  1
+   > Speed     :  4
+   > HP        :  2
+
+'Nidoqueen':
+   > Size      :  2
+   > Attack    :  2
+   > Defense   :  2
+   > Speed     :  4
+   > HP        :  5
+
+'Sandshrew':
+   > Size      :  4
+   > Attack    :  6
+   > Defense   :  3
+   > Speed     :  8
+   > HP        :  3
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 3: Human Player
+
+-------------------------
+After round 3
+
+---Human Player 's deck---
+Pidgey
+Ninetales
+Nidorina
+Caterpie
+Nidorino
+Sandslash
+Clefairy
+Sandshrew
+Ivysaur
+Nidoqueen
+---AI Player 1 's deck---
+Charizard
+Rattata
+Bulbasaur
+Raichu
+Venusaur
+Vulpix
+Blastoise
+Pidgeotto
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Wartortle
+Pikachu
+Beedrill
+Nidoran(M)
+Squirtle
+---AI Player 3 's deck---
+Clefable
+Metapod
+Spearow
+Charmeleon
+Charmander
+---AI Player 4 's deck---
+Nidoking
+Pidgeot
+Weedle
+Jigglypuff
+Ekans
+
+-------------------------
+
+The Human Player choose number 1
+
+-------------------------
+Round 4: Cards on the table:
+
+'Nidoking':
+   > Size      :  2
+   > Attack    :  4
+   > Defense   :  1
+   > Speed     :  5
+   > HP        :  8
+
+'Pidgey':
+   > Size      :  5
+   > Attack    :  6
+   > Defense   :  9
+   > Speed     :  9
+   > HP        :  6
+
+'Clefable':
+   > Size      :  3
+   > Attack    :  8
+   > Defense   :  6
+   > Speed     :  6
+   > HP        :  5
+
+'Charizard':
+   > Size      :  1
+   > Attack    :  8
+   > Defense   :  9
+   > Speed     :  3
+   > HP        :  2
+
+'Wartortle':
+   > Size      :  4
+   > Attack    :  4
+   > Defense   : 10
+   > Speed     :  4
+   > HP        :  8
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 4: Human Player
+
+-------------------------
+After round 4
+
+---Human Player 's deck---
+Ninetales
+Nidorina
+Caterpie
+Nidorino
+Sandslash
+Clefairy
+Sandshrew
+Ivysaur
+Nidoqueen
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+---AI Player 1 's deck---
+Rattata
+Bulbasaur
+Raichu
+Venusaur
+Vulpix
+Blastoise
+Pidgeotto
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Pikachu
+Beedrill
+Nidoran(M)
+Squirtle
+---AI Player 3 's deck---
+Metapod
+Spearow
+Charmeleon
+Charmander
+---AI Player 4 's deck---
+Pidgeot
+Weedle
+Jigglypuff
+Ekans
+
+-------------------------
+
+The Human Player choose number 1
+
+-------------------------
+Round 5: Cards on the table:
+
+'Pidgeot':
+   > Size      :  8
+   > Attack    :  5
+   > Defense   :  2
+   > Speed     :  7
+   > HP        :  1
+
+'Ninetales':
+   > Size      :  1
+   > Attack    :  0
+   > Defense   :  3
+   > Speed     :  6
+   > HP        :  7
+
+'Metapod':
+   > Size      :  1
+   > Attack    :  3
+   > Defense   :  7
+   > Speed     :  5
+   > HP        :  9
+
+'Rattata':
+   > Size      :  8
+   > Attack    :  1
+   > Defense   :  6
+   > Speed     :  5
+   > HP        :  0
+
+'Pikachu':
+   > Size      :  9
+   > Attack    : 10
+   > Defense   :  0
+   > Speed     :  5
+   > HP        :  9
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 5: AI Player 2
+
+-------------------------
+After round 5
+
+---Human Player 's deck---
+Nidorina
+Caterpie
+Nidorino
+Sandslash
+Clefairy
+Sandshrew
+Ivysaur
+Nidoqueen
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+---AI Player 1 's deck---
+Bulbasaur
+Raichu
+Venusaur
+Vulpix
+Blastoise
+Pidgeotto
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Beedrill
+Nidoran(M)
+Squirtle
+Pikachu
+Metapod
+Pidgeot
+Rattata
+Ninetales
+---AI Player 3 's deck---
+Spearow
+Charmeleon
+Charmander
+---AI Player 4 's deck---
+Weedle
+Jigglypuff
+Ekans
+
+-------------------------
+
+The AI Player 2 choose number 2
+
+-------------------------
+Round 6: Cards on the table:
+
+'Weedle':
+   > Size      :  0
+   > Attack    :  9
+   > Defense   :  6
+   > Speed     :  5
+   > HP        :  7
+
+'Nidorina':
+   > Size      :  6
+   > Attack    :  9
+   > Defense   :  6
+   > Speed     : 10
+   > HP        : 10
+
+'Spearow':
+   > Size      :  4
+   > Attack    :  2
+   > Defense   :  9
+   > Speed     :  1
+   > HP        :  7
+
+'Bulbasaur':
+   > Size      :  9
+   > Attack    :  9
+   > Defense   :  6
+   > Speed     :  3
+   > HP        :  5
+
+'Beedrill':
+   > Size      :  0
+   > Attack    :  7
+   > Defense   :  7
+   > Speed     :  7
+   > HP        :  7
+
+
+-------------------------
+A draw happened.
+Common Pile:
+
+Weedle
+Nidorina
+Spearow
+Bulbasaur
+Beedrill
+
+-------------------------
+After round 6
+
+---Human Player 's deck---
+Caterpie
+Nidorino
+Sandslash
+Clefairy
+Sandshrew
+Ivysaur
+Nidoqueen
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+---AI Player 1 's deck---
+Raichu
+Venusaur
+Vulpix
+Blastoise
+Pidgeotto
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Nidoran(M)
+Squirtle
+Pikachu
+Metapod
+Pidgeot
+Rattata
+Ninetales
+---AI Player 3 's deck---
+Charmeleon
+Charmander
+---AI Player 4 's deck---
+Jigglypuff
+Ekans
+
+-------------------------
+
+The AI Player 2 choose number 1
+
+-------------------------
+Round 7: Cards on the table:
+
+'Jigglypuff':
+   > Size      :  6
+   > Attack    :  0
+   > Defense   :  6
+   > Speed     :  0
+   > HP        :  9
+
+'Caterpie':
+   > Size      :  1
+   > Attack    :  8
+   > Defense   :  3
+   > Speed     :  2
+   > HP        : 10
+
+'Charmeleon':
+   > Size      : 10
+   > Attack    :  1
+   > Defense   :  0
+   > Speed     :  0
+   > HP        :  4
+
+'Raichu':
+   > Size      :  4
+   > Attack    :  7
+   > Defense   :  7
+   > Speed     :  6
+   > HP        :  7
+
+'Nidoran(M)':
+   > Size      :  9
+   > Attack    :  5
+   > Defense   :  7
+   > Speed     :  9
+   > HP        :  2
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 7: AI Player 3
+
+-------------------------
+After round 7
+
+---Human Player 's deck---
+Nidorino
+Sandslash
+Clefairy
+Sandshrew
+Ivysaur
+Nidoqueen
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+---AI Player 1 's deck---
+Venusaur
+Vulpix
+Blastoise
+Pidgeotto
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Squirtle
+Pikachu
+Metapod
+Pidgeot
+Rattata
+Ninetales
+---AI Player 3 's deck---
+Charmander
+Nidoran(M)
+Raichu
+Jigglypuff
+Caterpie
+Charmeleon
+Beedrill
+Spearow
+Nidorina
+Weedle
+Bulbasaur
+---AI Player 4 's deck---
+Ekans
+
+-------------------------
+
+The AI Player 3 choose number 5
+
+-------------------------
+Round 8: Cards on the table:
+
+'Ekans':
+   > Size      :  7
+   > Attack    :  4
+   > Defense   : 10
+   > Speed     :  7
+   > HP        :  7
+
+'Nidorino':
+   > Size      :  8
+   > Attack    :  4
+   > Defense   :  6
+   > Speed     :  8
+   > HP        :  9
+
+'Charmander':
+   > Size      :  4
+   > Attack    :  8
+   > Defense   :  2
+   > Speed     :  9
+   > HP        : 10
+
+'Venusaur':
+   > Size      :  7
+   > Attack    :  7
+   > Defense   :  9
+   > Speed     :  0
+   > HP        :  4
+
+'Squirtle':
+   > Size      :  3
+   > Attack    : 10
+   > Defense   :  9
+   > Speed     :  0
+   > HP        :  7
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 8: AI Player 3
+
+-------------------------
+After round 8
+
+---Human Player 's deck---
+Sandslash
+Clefairy
+Sandshrew
+Ivysaur
+Nidoqueen
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+---AI Player 1 's deck---
+Vulpix
+Blastoise
+Pidgeotto
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Pikachu
+Metapod
+Pidgeot
+Rattata
+Ninetales
+---AI Player 3 's deck---
+Nidoran(M)
+Raichu
+Jigglypuff
+Caterpie
+Charmeleon
+Beedrill
+Spearow
+Nidorina
+Weedle
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 1
+
+-------------------------
+Round 9: Cards on the table:
+
+'Sandslash':
+   > Size      : 10
+   > Attack    :  0
+   > Defense   : 10
+   > Speed     :  1
+   > HP        : 10
+
+'Nidoran(M)':
+   > Size      :  9
+   > Attack    :  5
+   > Defense   :  7
+   > Speed     :  9
+   > HP        :  2
+
+'Vulpix':
+   > Size      :  9
+   > Attack    :  5
+   > Defense   : 10
+   > Speed     :  5
+   > HP        :  8
+
+'Pikachu':
+   > Size      :  9
+   > Attack    : 10
+   > Defense   :  0
+   > Speed     :  5
+   > HP        :  9
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 9: Human Player
+
+-------------------------
+After round 9
+
+---Human Player 's deck---
+Clefairy
+Sandshrew
+Ivysaur
+Nidoqueen
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 's deck---
+Blastoise
+Pidgeotto
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Metapod
+Pidgeot
+Rattata
+Ninetales
+---AI Player 3 's deck---
+Raichu
+Jigglypuff
+Caterpie
+Charmeleon
+Beedrill
+Spearow
+Nidorina
+Weedle
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The Human Player choose number 3
+
+-------------------------
+Round 10: Cards on the table:
+
+'Clefairy':
+   > Size      :  8
+   > Attack    :  4
+   > Defense   :  1
+   > Speed     :  4
+   > HP        :  2
+
+'Raichu':
+   > Size      :  4
+   > Attack    :  7
+   > Defense   :  7
+   > Speed     :  6
+   > HP        :  7
+
+'Blastoise':
+   > Size      :  1
+   > Attack    :  4
+   > Defense   :  7
+   > Speed     :  5
+   > HP        :  5
+
+'Metapod':
+   > Size      :  1
+   > Attack    :  3
+   > Defense   :  7
+   > Speed     :  5
+   > HP        :  9
+
+
+-------------------------
+A draw happened.
+Common Pile:
+
+Clefairy
+Raichu
+Blastoise
+Metapod
+
+-------------------------
+After round 10
+
+---Human Player 's deck---
+Sandshrew
+Ivysaur
+Nidoqueen
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 's deck---
+Pidgeotto
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Pidgeot
+Rattata
+Ninetales
+---AI Player 3 's deck---
+Jigglypuff
+Caterpie
+Charmeleon
+Beedrill
+Spearow
+Nidorina
+Weedle
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The Human Player choose number 5
+
+-------------------------
+Round 11: Cards on the table:
+
+'Sandshrew':
+   > Size      :  4
+   > Attack    :  6
+   > Defense   :  3
+   > Speed     :  8
+   > HP        :  3
+
+'Jigglypuff':
+   > Size      :  6
+   > Attack    :  0
+   > Defense   :  6
+   > Speed     :  0
+   > HP        :  9
+
+'Pidgeotto':
+   > Size      :  5
+   > Attack    :  4
+   > Defense   :  1
+   > Speed     :  9
+   > HP        :  5
+
+'Pidgeot':
+   > Size      :  8
+   > Attack    :  5
+   > Defense   :  2
+   > Speed     :  7
+   > HP        :  1
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 11: AI Player 3
+
+-------------------------
+After round 11
+
+---Human Player 's deck---
+Ivysaur
+Nidoqueen
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 's deck---
+Arbok
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Rattata
+Ninetales
+---AI Player 3 's deck---
+Caterpie
+Charmeleon
+Beedrill
+Spearow
+Nidorina
+Weedle
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 5
+
+-------------------------
+Round 12: Cards on the table:
+
+'Ivysaur':
+   > Size      :  5
+   > Attack    : 10
+   > Defense   :  0
+   > Speed     :  0
+   > HP        :  6
+
+'Caterpie':
+   > Size      :  1
+   > Attack    :  8
+   > Defense   :  3
+   > Speed     :  2
+   > HP        : 10
+
+'Arbok':
+   > Size      :  2
+   > Attack    :  3
+   > Defense   :  4
+   > Speed     :  6
+   > HP        :  2
+
+'Rattata':
+   > Size      :  8
+   > Attack    :  1
+   > Defense   :  6
+   > Speed     :  5
+   > HP        :  0
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 12: AI Player 3
+
+-------------------------
+After round 12
+
+---Human Player 's deck---
+Nidoqueen
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 's deck---
+Raticate
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 's deck---
+Ninetales
+---AI Player 3 's deck---
+Charmeleon
+Beedrill
+Spearow
+Nidorina
+Weedle
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 1
+
+-------------------------
+Round 13: Cards on the table:
+
+'Nidoqueen':
+   > Size      :  2
+   > Attack    :  2
+   > Defense   :  2
+   > Speed     :  4
+   > HP        :  5
+
+'Charmeleon':
+   > Size      : 10
+   > Attack    :  1
+   > Defense   :  0
+   > Speed     :  0
+   > HP        :  4
+
+'Raticate':
+   > Size      : 10
+   > Attack    :  6
+   > Defense   :  1
+   > Speed     :  7
+   > HP        :  1
+
+'Ninetales':
+   > Size      :  1
+   > Attack    :  0
+   > Defense   :  3
+   > Speed     :  6
+   > HP        :  7
+
+
+-------------------------
+A draw happened.
+Common Pile:
+
+Nidoqueen
+Charmeleon
+Raticate
+Ninetales
+
+-------------------------
+After round 13
+
+---Human Player 's deck---
+Wartortle
+Charizard
+Nidoking
+Pidgey
+Clefable
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 's deck---
+Butterfree
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Beedrill
+Spearow
+Nidorina
+Weedle
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 2
+
+-------------------------
+Round 14: Cards on the table:
+
+'Wartortle':
+   > Size      :  4
+   > Attack    :  4
+   > Defense   : 10
+   > Speed     :  4
+   > HP        :  8
+
+'Beedrill':
+   > Size      :  0
+   > Attack    :  7
+   > Defense   :  7
+   > Speed     :  7
+   > HP        :  7
+
+'Butterfree':
+   > Size      :  7
+   > Attack    :  6
+   > Defense   :  1
+   > Speed     :  7
+   > HP        :  5
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 14: AI Player 3
+
+-------------------------
+After round 14
+
+---Human Player 's deck---
+Charizard
+Nidoking
+Pidgey
+Clefable
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 's deck---
+Nidoran(F)
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Spearow
+Nidorina
+Weedle
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 3
+
+-------------------------
+Round 15: Cards on the table:
+
+'Charizard':
+   > Size      :  1
+   > Attack    :  8
+   > Defense   :  9
+   > Speed     :  3
+   > HP        :  2
+
+'Spearow':
+   > Size      :  4
+   > Attack    :  2
+   > Defense   :  9
+   > Speed     :  1
+   > HP        :  7
+
+'Nidoran(F)':
+   > Size      :  9
+   > Attack    :  2
+   > Defense   :  8
+   > Speed     :  2
+   > HP        :  0
+
+
+-------------------------
+A draw happened.
+Common Pile:
+
+Charizard
+Spearow
+Nidoran(F)
+
+-------------------------
+After round 15
+
+---Human Player 's deck---
+Nidoking
+Pidgey
+Clefable
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 's deck---
+Fearow
+Wigglytuff
+Kakuna
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Nidorina
+Weedle
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 4
+
+-------------------------
+Round 16: Cards on the table:
+
+'Nidoking':
+   > Size      :  2
+   > Attack    :  4
+   > Defense   :  1
+   > Speed     :  5
+   > HP        :  8
+
+'Nidorina':
+   > Size      :  6
+   > Attack    :  9
+   > Defense   :  6
+   > Speed     : 10
+   > HP        : 10
+
+'Fearow':
+   > Size      :  7
+   > Attack    :  6
+   > Defense   : 10
+   > Speed     :  3
+   > HP        : 10
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 16: AI Player 3
+
+-------------------------
+After round 16
+
+---Human Player 's deck---
+Pidgey
+Clefable
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 's deck---
+Wigglytuff
+Kakuna
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Weedle
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 2
+
+-------------------------
+Round 17: Cards on the table:
+
+'Pidgey':
+   > Size      :  5
+   > Attack    :  6
+   > Defense   :  9
+   > Speed     :  9
+   > HP        :  6
+
+'Weedle':
+   > Size      :  0
+   > Attack    :  9
+   > Defense   :  6
+   > Speed     :  5
+   > HP        :  7
+
+'Wigglytuff':
+   > Size      :  0
+   > Attack    :  9
+   > Defense   :  7
+   > Speed     :  5
+   > HP        :  9
+
+
+-------------------------
+A draw happened.
+Common Pile:
+
+Pidgey
+Weedle
+Wigglytuff
+
+-------------------------
+After round 17
+
+---Human Player 's deck---
+Clefable
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 's deck---
+Kakuna
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Bulbasaur
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 1
+
+-------------------------
+Round 18: Cards on the table:
+
+'Clefable':
+   > Size      :  3
+   > Attack    :  8
+   > Defense   :  6
+   > Speed     :  6
+   > HP        :  5
+
+'Bulbasaur':
+   > Size      :  9
+   > Attack    :  9
+   > Defense   :  6
+   > Speed     :  3
+   > HP        :  5
+
+'Kakuna':
+   > Size      :  9
+   > Attack    :  9
+   > Defense   :  1
+   > Speed     :  2
+   > HP        :  0
+
+
+-------------------------
+A draw happened.
+Common Pile:
+
+Clefable
+Bulbasaur
+Kakuna
+
+-------------------------
+After round 18
+
+---Human Player 's deck---
+Sandslash
+Pikachu
+Nidoran(M)
+Vulpix
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Nidorino
+Ekans
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 5
+
+-------------------------
+Round 19: Cards on the table:
+
+'Sandslash':
+   > Size      : 10
+   > Attack    :  0
+   > Defense   : 10
+   > Speed     :  1
+   > HP        : 10
+
+'Nidorino':
+   > Size      :  8
+   > Attack    :  4
+   > Defense   :  6
+   > Speed     :  8
+   > HP        :  9
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 19: Human Player
+
+-------------------------
+After round 19
+
+---Human Player 's deck---
+Pikachu
+Nidoran(M)
+Vulpix
+Sandslash
+Nidorino
+Kakuna
+Pidgey
+Clefable
+Bulbasaur
+Wigglytuff
+Weedle
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Ekans
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The Human Player choose number 4
+
+-------------------------
+Round 20: Cards on the table:
+
+'Pikachu':
+   > Size      :  9
+   > Attack    : 10
+   > Defense   :  0
+   > Speed     :  5
+   > HP        :  9
+
+'Ekans':
+   > Size      :  7
+   > Attack    :  4
+   > Defense   : 10
+   > Speed     :  7
+   > HP        :  7
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 20: AI Player 3
+
+-------------------------
+After round 20
+
+---Human Player 's deck---
+Nidoran(M)
+Vulpix
+Sandslash
+Nidorino
+Kakuna
+Pidgey
+Clefable
+Bulbasaur
+Wigglytuff
+Weedle
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Charmander
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 5
+
+-------------------------
+Round 21: Cards on the table:
+
+'Nidoran(M)':
+   > Size      :  9
+   > Attack    :  5
+   > Defense   :  7
+   > Speed     :  9
+   > HP        :  2
+
+'Charmander':
+   > Size      :  4
+   > Attack    :  8
+   > Defense   :  2
+   > Speed     :  9
+   > HP        : 10
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 21: AI Player 3
+
+-------------------------
+After round 21
+
+---Human Player 's deck---
+Vulpix
+Sandslash
+Nidorino
+Kakuna
+Pidgey
+Clefable
+Bulbasaur
+Wigglytuff
+Weedle
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Venusaur
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 3
+
+-------------------------
+Round 22: Cards on the table:
+
+'Vulpix':
+   > Size      :  9
+   > Attack    :  5
+   > Defense   : 10
+   > Speed     :  5
+   > HP        :  8
+
+'Venusaur':
+   > Size      :  7
+   > Attack    :  7
+   > Defense   :  9
+   > Speed     :  0
+   > HP        :  4
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 22: Human Player
+
+-------------------------
+After round 22
+
+---Human Player 's deck---
+Sandslash
+Nidorino
+Kakuna
+Pidgey
+Clefable
+Bulbasaur
+Wigglytuff
+Weedle
+Vulpix
+Venusaur
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Squirtle
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The Human Player choose number 4
+
+-------------------------
+Round 23: Cards on the table:
+
+'Sandslash':
+   > Size      : 10
+   > Attack    :  0
+   > Defense   : 10
+   > Speed     :  1
+   > HP        : 10
+
+'Squirtle':
+   > Size      :  3
+   > Attack    : 10
+   > Defense   :  9
+   > Speed     :  0
+   > HP        :  7
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 23: Human Player
+
+-------------------------
+After round 23
+
+---Human Player 's deck---
+Nidorino
+Kakuna
+Pidgey
+Clefable
+Bulbasaur
+Wigglytuff
+Weedle
+Vulpix
+Venusaur
+Squirtle
+Sandslash
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Pidgeot
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The Human Player choose number 2
+
+-------------------------
+Round 24: Cards on the table:
+
+'Nidorino':
+   > Size      :  8
+   > Attack    :  4
+   > Defense   :  6
+   > Speed     :  8
+   > HP        :  9
+
+'Pidgeot':
+   > Size      :  8
+   > Attack    :  5
+   > Defense   :  2
+   > Speed     :  7
+   > HP        :  1
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 24: AI Player 3
+
+-------------------------
+After round 24
+
+---Human Player 's deck---
+Kakuna
+Pidgey
+Clefable
+Bulbasaur
+Wigglytuff
+Weedle
+Vulpix
+Venusaur
+Squirtle
+Sandslash
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Pidgeotto
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 4
+
+-------------------------
+Round 25: Cards on the table:
+
+'Kakuna':
+   > Size      :  9
+   > Attack    :  9
+   > Defense   :  1
+   > Speed     :  2
+   > HP        :  0
+
+'Pidgeotto':
+   > Size      :  5
+   > Attack    :  4
+   > Defense   :  1
+   > Speed     :  9
+   > HP        :  5
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 25: AI Player 3
+
+-------------------------
+After round 25
+
+---Human Player 's deck---
+Pidgey
+Clefable
+Bulbasaur
+Wigglytuff
+Weedle
+Vulpix
+Venusaur
+Squirtle
+Sandslash
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Sandshrew
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 4
+
+-------------------------
+Round 26: Cards on the table:
+
+'Pidgey':
+   > Size      :  5
+   > Attack    :  6
+   > Defense   :  9
+   > Speed     :  9
+   > HP        :  6
+
+'Sandshrew':
+   > Size      :  4
+   > Attack    :  6
+   > Defense   :  3
+   > Speed     :  8
+   > HP        :  3
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 26: Human Player
+
+-------------------------
+After round 26
+
+---Human Player 's deck---
+Clefable
+Bulbasaur
+Wigglytuff
+Weedle
+Vulpix
+Venusaur
+Squirtle
+Sandslash
+Sandshrew
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Jigglypuff
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The Human Player choose number 1
+
+-------------------------
+Round 27: Cards on the table:
+
+'Clefable':
+   > Size      :  3
+   > Attack    :  8
+   > Defense   :  6
+   > Speed     :  6
+   > HP        :  5
+
+'Jigglypuff':
+   > Size      :  6
+   > Attack    :  0
+   > Defense   :  6
+   > Speed     :  0
+   > HP        :  9
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 27: AI Player 3
+
+-------------------------
+After round 27
+
+---Human Player 's deck---
+Bulbasaur
+Wigglytuff
+Weedle
+Vulpix
+Venusaur
+Squirtle
+Sandslash
+Sandshrew
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Blastoise
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 3
+
+-------------------------
+Round 28: Cards on the table:
+
+'Bulbasaur':
+   > Size      :  9
+   > Attack    :  9
+   > Defense   :  6
+   > Speed     :  3
+   > HP        :  5
+
+'Blastoise':
+   > Size      :  1
+   > Attack    :  4
+   > Defense   :  7
+   > Speed     :  5
+   > HP        :  5
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 28: AI Player 3
+
+-------------------------
+After round 28
+
+---Human Player 's deck---
+Wigglytuff
+Weedle
+Vulpix
+Venusaur
+Squirtle
+Sandslash
+Sandshrew
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Metapod
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+Bulbasaur
+Blastoise
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 5
+
+-------------------------
+Round 29: Cards on the table:
+
+'Wigglytuff':
+   > Size      :  0
+   > Attack    :  9
+   > Defense   :  7
+   > Speed     :  5
+   > HP        :  9
+
+'Metapod':
+   > Size      :  1
+   > Attack    :  3
+   > Defense   :  7
+   > Speed     :  5
+   > HP        :  9
+
+
+-------------------------
+A draw happened.
+Common Pile:
+
+Wigglytuff
+Metapod
+
+-------------------------
+After round 29
+
+---Human Player 's deck---
+Weedle
+Vulpix
+Venusaur
+Squirtle
+Sandslash
+Sandshrew
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Clefairy
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+Bulbasaur
+Blastoise
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 1
+
+-------------------------
+Round 30: Cards on the table:
+
+'Weedle':
+   > Size      :  0
+   > Attack    :  9
+   > Defense   :  6
+   > Speed     :  5
+   > HP        :  7
+
+'Clefairy':
+   > Size      :  8
+   > Attack    :  4
+   > Defense   :  1
+   > Speed     :  4
+   > HP        :  2
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 30: AI Player 3
+
+-------------------------
+After round 30
+
+---Human Player 's deck---
+Vulpix
+Venusaur
+Squirtle
+Sandslash
+Sandshrew
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Raichu
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+Bulbasaur
+Blastoise
+Clefairy
+Weedle
+Wigglytuff
+Metapod
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 2
+
+-------------------------
+Round 31: Cards on the table:
+
+'Vulpix':
+   > Size      :  9
+   > Attack    :  5
+   > Defense   : 10
+   > Speed     :  5
+   > HP        :  8
+
+'Raichu':
+   > Size      :  4
+   > Attack    :  7
+   > Defense   :  7
+   > Speed     :  6
+   > HP        :  7
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 31: AI Player 3
+
+-------------------------
+After round 31
+
+---Human Player 's deck---
+Venusaur
+Squirtle
+Sandslash
+Sandshrew
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Arbok
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+Bulbasaur
+Blastoise
+Clefairy
+Weedle
+Wigglytuff
+Metapod
+Vulpix
+Raichu
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 4
+
+-------------------------
+Round 32: Cards on the table:
+
+'Venusaur':
+   > Size      :  7
+   > Attack    :  7
+   > Defense   :  9
+   > Speed     :  0
+   > HP        :  4
+
+'Arbok':
+   > Size      :  2
+   > Attack    :  3
+   > Defense   :  4
+   > Speed     :  6
+   > HP        :  2
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 32: AI Player 3
+
+-------------------------
+After round 32
+
+---Human Player 's deck---
+Squirtle
+Sandslash
+Sandshrew
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Rattata
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+Bulbasaur
+Blastoise
+Clefairy
+Weedle
+Wigglytuff
+Metapod
+Vulpix
+Raichu
+Arbok
+Venusaur
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 1
+
+-------------------------
+Round 33: Cards on the table:
+
+'Squirtle':
+   > Size      :  3
+   > Attack    : 10
+   > Defense   :  9
+   > Speed     :  0
+   > HP        :  7
+
+'Rattata':
+   > Size      :  8
+   > Attack    :  1
+   > Defense   :  6
+   > Speed     :  5
+   > HP        :  0
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 33: AI Player 3
+
+-------------------------
+After round 33
+
+---Human Player 's deck---
+Sandslash
+Sandshrew
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Ivysaur
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+Bulbasaur
+Blastoise
+Clefairy
+Weedle
+Wigglytuff
+Metapod
+Vulpix
+Raichu
+Arbok
+Venusaur
+Squirtle
+Rattata
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 2
+
+-------------------------
+Round 34: Cards on the table:
+
+'Sandslash':
+   > Size      : 10
+   > Attack    :  0
+   > Defense   : 10
+   > Speed     :  1
+   > HP        : 10
+
+'Ivysaur':
+   > Size      :  5
+   > Attack    : 10
+   > Defense   :  0
+   > Speed     :  0
+   > HP        :  6
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 34: AI Player 3
+
+-------------------------
+After round 34
+
+---Human Player 's deck---
+Sandshrew
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Caterpie
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+Bulbasaur
+Blastoise
+Clefairy
+Weedle
+Wigglytuff
+Metapod
+Vulpix
+Raichu
+Arbok
+Venusaur
+Squirtle
+Rattata
+Sandslash
+Ivysaur
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 5
+
+-------------------------
+Round 35: Cards on the table:
+
+'Sandshrew':
+   > Size      :  4
+   > Attack    :  6
+   > Defense   :  3
+   > Speed     :  8
+   > HP        :  3
+
+'Caterpie':
+   > Size      :  1
+   > Attack    :  8
+   > Defense   :  3
+   > Speed     :  2
+   > HP        : 10
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 35: AI Player 3
+
+-------------------------
+After round 35
+
+---Human Player 's deck---
+Pidgey
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Beedrill
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+Bulbasaur
+Blastoise
+Clefairy
+Weedle
+Wigglytuff
+Metapod
+Vulpix
+Raichu
+Arbok
+Venusaur
+Squirtle
+Rattata
+Sandslash
+Ivysaur
+Caterpie
+Sandshrew
+---AI Player 4 is out of the Game---
+
+-------------------------
+
+The AI Player 3 choose number 2
+
+-------------------------
+Round 36: Cards on the table:
+
+'Pidgey':
+   > Size      :  5
+   > Attack    :  6
+   > Defense   :  9
+   > Speed     :  9
+   > HP        :  6
+
+'Beedrill':
+   > Size      :  0
+   > Attack    :  7
+   > Defense   :  7
+   > Speed     :  7
+   > HP        :  7
+
+
+-------------------------
+Common Pile is cleaned.
+
+-------------------------
+Winner for round 36: AI Player 3
+
+-------------------------
+After round 36
+
+---Human Player is out of the Game---
+---AI Player 1 is out of the Game---
+---AI Player 2 is out of the Game---
+---AI Player 3 's deck---
+Wartortle
+Butterfree
+Raticate
+Ninetales
+Nidoqueen
+Charmeleon
+Fearow
+Nidoking
+Nidorina
+Charizard
+Spearow
+Nidoran(F)
+Ekans
+Pikachu
+Nidoran(M)
+Charmander
+Nidorino
+Pidgeot
+Kakuna
+Pidgeotto
+Clefable
+Jigglypuff
+Bulbasaur
+Blastoise
+Clefairy
+Weedle
+Wigglytuff
+Metapod
+Vulpix
+Raichu
+Arbok
+Venusaur
+Squirtle
+Rattata
+Sandslash
+Ivysaur
+Caterpie
+Sandshrew
+Beedrill
+Pidgey
+---AI Player 4 is out of the Game---

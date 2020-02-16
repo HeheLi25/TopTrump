@@ -26,8 +26,17 @@ public class Game {
 	public HashMap<Player, Card> cardThisRound;
 	public Player roundWinner;
 	
+	private boolean testLog;
+	private TestLogWritter testLogWritter;
 	
-	public Game(int AIPlayers){
+	
+	public Game(int AIPlayers, boolean test){
+		if(test) {
+			//System.out.println("Set testLog = true.");
+			testLogWritter = new TestLogWritter();
+			testLogWritter.clean();
+			testLog = true;
+		}
 		this.numOfPlayers = AIPlayers+1; //total player number
 		players = new Player[numOfPlayers];
 		
@@ -49,6 +58,10 @@ public class Game {
 		numOfDraws = 0;
 		cardThisRound = new  HashMap<Player, Card>();
 	}
+	//the overload constructor calls the origin constructor with numOfPlayers = 4.
+	public Game() {
+		this(4,false);
+	}
 	
 	public void gameInit() {
 		players = new Player[numOfPlayers];
@@ -68,12 +81,9 @@ public class Game {
 		inGame = true;
 		isDraw = false;
 		numOfDraws = 0;
-		cardThisRound = new  HashMap<Player, Card>();
+		cardThisRound = new HashMap<Player, Card>();
 	}
-	//the overload constructor calls the origin constructor with numOfPlayers = 4.
-	public Game(){
-		this(4); 
-	}
+
 	//getters and setters
 	public Player[] getPlayers() {
 		return players;
@@ -119,6 +129,13 @@ public class Game {
 			}
 			//set the name of categories of the cards
 			deck.get(0).setCategory(categories);
+			//System.out.println(testLogWritter);
+			if(testLog) {
+				testLogWritter.write("The deck has been read and built.\n\n");
+				for(Card c: deck) {
+					testLogWritter.write(c.getDescription()+"\n");
+				}
+			}
 			
 		}catch(IOException e){
 			System.err.println("File reading error");
@@ -131,6 +148,13 @@ public class Game {
 			}
 		}
 		Collections.shuffle(deck); //shuffle card deck
+		if(testLog) {
+			testLogWritter.write("-------------------------");
+			testLogWritter.write("\nThe deck was shuffled.\n\n");
+			for(Card c: deck) {
+				testLogWritter.write(c.getDescription()+"\n");
+			}
+		}
 //		System.out.println(deck);
 		int cardForEach = deck.size()/numOfPlayers;
 		int cardRemain = deck.size()%numOfPlayers; //if the number of cards cannot be evenly distributed
@@ -141,6 +165,13 @@ public class Game {
 				commonPile.add(tempCard);
 				deck.remove(0);
 			}
+			if(testLog) {
+				testLogWritter.write("\n-------------------------\n");
+				testLogWritter.write("\nThe remainning cards go into common pile.\n");
+				for(Card c : commonPile) {
+					testLogWritter.write(c.getDescription()+"\n");
+				}
+			}
 		}
 		//distribute card evenly
 		for(int i = 0; i < numOfPlayers; i++){
@@ -149,6 +180,16 @@ public class Game {
 				tempCard.setOwner(players[i]);
 				players[i].getCards().add(tempCard);
 				deck.remove(0);
+			}
+		}
+		if(testLog) {
+			testLogWritter.write("\n-------------------------");
+			testLogWritter.write("\nCards has been distributed.\n\n");
+			for(int i = 0; i < numOfPlayers; i++) {
+				testLogWritter.write("-----"+players[i].getName()+"-----\n");
+				for(Card c: players[i].getCards()) {
+					testLogWritter.write(c.getDescription()+"\n");
+				}
 			}
 		}
 	}
@@ -205,21 +246,43 @@ public class Game {
 		Player winner = roundWinner;
 		//We got the result now. Handle the end of a round.
 		ArrayList<Card> cardThisRoundArray = new ArrayList<Card>(cardThisRound.values());
+		if(testLog) {
+			testLogWritter.write("\n-------------------------");
+			testLogWritter.write("\nRound "+round+": Cards on the table:\n\n");
+			for(Card c: cardThisRoundArray) {
+				testLogWritter.write(c.toString()+"\n");
+			}
+		}
 		if(isDraw == true){
 			//handle the draw!	
 			commonPile.addAll(cardThisRoundArray);
 			System.out.println("Round "+round +": This round was a Draw, common pile now has "+commonPile.size()+" cards");
 			numOfDraws++;
 			//the active player remains unchanged
+			if(testLog) {
+				testLogWritter.write("\n-------------------------");
+				testLogWritter.write("\nA draw happened.\nCommon Pile:\n\n");
+				for(Card c: cardThisRoundArray) {
+					testLogWritter.write(c.getDescription()+"\n");
+				}
+			}
 		}else{
 			//Winner gets all the cards this round.
 			winner.addCards(cardThisRoundArray);
 			winner.setScore(winner.getScore()+1);
 			if(commonPile.size() != 0);{ //if there are cards in common pile, give them to the winner.
+				if(testLog) {
+					testLogWritter.write("\n-------------------------");
+					testLogWritter.write("\nCommon Pile is cleaned.\n");
+				}
 				winner.addCards(commonPile);
 				commonPile.clear();
 			}
 			System.out.println("Round "+round +": Player "+ winner.getName() +" won this round.");
+			if(testLog) {
+				testLogWritter.write("\n-------------------------");
+				testLogWritter.write("\nWinner for round "+round+": "+winner.getName()+"\n");
+			}
 			//change the active player.
 			for(int i = 0; i < players.length; i++){ 
 				if(players[i].equals(winner))
@@ -232,6 +295,20 @@ public class Game {
 						
 		//Eliminate players, check whether the game should be end.
 		checkAlivePlayers();
+		if(testLog) {
+			testLogWritter.write("\n-------------------------");
+			testLogWritter.write("\nAfter round "+round+"\n\n");
+			for(int i = 0; i<numOfPlayers; i++) {
+				if(players[i].isInGame()) {
+					testLogWritter.write("---"+players[i].getName()+" 's deck---\n");
+					for(Card c:players[i].getCards()) {
+						testLogWritter.write(c.getDescription()+"\n");
+					}
+				}else {
+					testLogWritter.write("---"+players[i].getName()+" is out of the Game---\n");
+				}
+			}
+		}
 		if (howManyAlive <= 1) {
 			System.out.println("\nGame End\n");
 			if (howManyAlive == 1) {
@@ -254,6 +331,7 @@ public class Game {
 			for (int i = 0; i < numOfPlayers; i++) {
 				System.out.println("   " + players[i].getName() + ": " + players[i].getScore());
 			}
+			DBConnect.storeGameResult(players[0].getScore(),players[1].getScore(),players[2].getScore(),players[3].getScore(),players[4].getScore(), numOfDraws, round, winner.getName());
 			System.out.println();
 			inGame = false;
 		}
@@ -297,6 +375,10 @@ public class Game {
 		}
 		humanChoice --; //the options start from 1 but we need the number start from 0.
 		roundChoice = humanChoice;
+		if(testLog) {
+			testLogWritter.write("\n-------------------------\n");
+			testLogWritter.write("\nThe Human Player choose number "+(humanChoice+1)+"\n");
+			}
 		winner = compare(humanChoice);
 		roundWinner = winner;
 		return winner;
@@ -308,6 +390,10 @@ public class Game {
 		Card currentCard = cardThisRound.get(players[theActivePlayer]);
 		int AIChoice = currentCard.returnHighestStat();
 		roundChoice = AIChoice;
+		if(testLog) {
+			testLogWritter.write("\n-------------------------\n");
+			testLogWritter.write("\nThe "+players[theActivePlayer].getName()+" choose number "+(roundChoice+1)+"\n");
+			}
 		winner = compare(AIChoice);
 		roundWinner = winner;
 		return winner;

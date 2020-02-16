@@ -54,7 +54,7 @@ public class TopTrumpsRESTAPI {
 	 * @param conf
 	 */
 	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) {
-		model = new Game(4);
+		model = new Game();
 		
 	}
 	

@@ -22,17 +22,23 @@
         content="width+device-width,initial-scale=1"> 
         
         <style> 
+	
         .button {
-        	cursor: pointer;
+        cursor: pointer;
+	background:#BCE1C2;
+	border-radius:25px;
         }
+	
+	.position {
+	text_align:center;
+	}
         
         .buttons{
-          background: #BCE1C2;
+          background: #FFCB05;
           cursor: pointer;
-          width: 220px;
+          width: 140px;
           height: 30px;
-          display: block;
-          }
+         }
         
         .header {
          text-align: right; 
@@ -43,13 +49,21 @@
          
          .header2{ 
          border-style:solid;
-         border-size:10px;
-         width:50%;
+	 border-radius:5px;
+         width:45%;
          text-align:center;
-         margin-top:5px;
-         border-color: #0059b3;
+         margin-top:2px;
+         border-color: #003A70;
+	 background-color: #3D7DCA;
+	 color: #FFCB05;
          }
-       
+	 
+        .category {
+         color: #003A70;
+         font-size:100%;
+         text-align: center;
+         margin-bottom:2px;
+         }
          
          .titleCard{ 
          background:#F09341; 
@@ -64,19 +78,13 @@
         border-radius: 15px; 
         rgba(0,0,0,0.2);
         width: 17%;
-        height:57%;
+        height:52%;
         display:inline-block;
         margin: 10px;
-        margin-top:25px;
+        margin-top:5px;
         text-align:center;
         }
         
-        .dropbox{
-        margin-top: 20px;
-        background:red;
-        height: 50px;
-        width: 100px;
-        }
         .image{
         margin-top:10px;
         width:100%;
@@ -108,39 +116,40 @@
         </div>
         
         <div> 
-             <p style="margin-top:10px";>  Choose Category: </p>
+             <h5 class="category">  Choose Category: </h5>
           </div>
-       <div class="buttons"> 
+	  
+       <div class="position"> 
              <button id="category1" class="buttons" onclick="humanChoice(0)">Attack</button>
           </div>
-        <div class="buttons"> 
+        <div class="position"> 
              <button id="category2" class="buttons" onclick="humanChoice(1)">Size</button>
           </div>   
-              <div class="buttons"> 
+              <div class="position"> 
              <button id="category3" class="buttons" onclick="humanChoice(2)">Defence</button>
           </div>   
-          <div class="buttons"> 
+          <div class="position"> 
              <button id="category4" class="buttons" onclick="humanChoice(3)">Speed</button>
           </div> 
-          <div class="buttons"> 
+          <div class="position"> 
              <button id="category5" class="buttons" onclick="humanChoice(4)">HP</button>
           </div>
           <br>
-           <div> 
+           <div class="position"> 
              <button id="next" class="button" onclick="nextRound()">Next Round</button>&nbsp;
              <button id="newGame" class="button" onclick="gameInit()">New Game</button>
           </div>
            
-    	<div id="HumanPlayer" class="card" style="">
+    	<div id="HumanPlayer" class="card">
     	   <div class="titleCard"> 
     	      <a class="titleCard" id="titleCard0"> YOU </a>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png" height="140" id="card0">
+    	      <img height="110" id="card0">
     	    </div>
     	       <div class="container"> 
-    	       <h3 id="cardName0"></h3>
-    	       <h5>Attributes:</h5>
+    	       <h5 id="cardName0" style="text-align:center"></h5>
+    	       <h6>Attributes:</h6>
     	         <ul>
     	           <li id="attributeOne0"></li>
     	           <li id="attributeTwo0"></li>
@@ -156,11 +165,11 @@
     	      <a class="titleCard" id="titleCard1">AI Player 1 </a>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png"  height="140" id="card1">
+    	      <img height="110" id="card1">
     	    </div>
     	  <div class="container"> 
-    	   <h3 id="cardName1"></h3>
-    	   <h5>Attributes:</h5>
+    	   <h5 id="cardName1" style="text-align:center"></h5>
+    	   <h6>Attributes:</h6>
     	    <ul>
     	     <li id="attributeOne1"><u></u></li>
     	     <li id="attributeTwo1"><u></u></li>
@@ -176,11 +185,11 @@
     	      <a class="titleCard" id="titleCard2">AI Player 2 </a>
     	    </div>  
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png" height="140" id="card2">
+    	      <img height="110" id="card2">
     	    </div>
     	  <div class="container"> 
-    	   <h3 id="cardName2"></h3>
-    	   <h5>Attributes:</h5>
+    	   <h5 id="cardName2" style="text-align:center"></h5>
+    	   <h6>Attributes:</h6>
     	    <ul>
     	     <li id="attributeOne2"><u></u></li>
     	     <li id="attributeTwo2"><u></u></li>
@@ -196,11 +205,11 @@
     	      <a class="titleCard" id="titleCard3">AI Player 3 </a>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png"  height="140" id="card3">
+    	      <img height="110" id="card3">
     	    </div>
     	  <div class="container"> 
-    	   <h3 id="cardName3"></h3>
-    	   <h5>Attributes:</h5>
+    	   <h5 id="cardName3" style="text-align:center"></h5>
+    	   <h6>Attributes:</h6>
     	    <ul>
     	     <li id="attributeOne3"><u></u></li>
     	     <li id="attributeTwo3"><u></u></li>
@@ -216,11 +225,11 @@
     	      <a class="titleCard" id="titleCard4">AI Player 4 </a>
     	    </div> 
     	    <div class="image">
-    	      <img src="/assets/Pikachu.png"  height="140" id="card4">
+    	      <img height="110" id="card4">
     	    </div>
     	  <div class="container"> 
-    	   <h3 id="cardName4"></h3>
-    	   <h5>Attributes:</h5>
+    	   <h5 id="cardName4" style="text-align:center"></h5>
+    	   <h6>Attributes:</h6>
     	    <ul>
     	     <li id="attributeOne4"><u></u></li>
     	     <li id="attributeTwo4"><u></u></li>

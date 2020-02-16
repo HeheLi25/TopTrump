@@ -39,7 +39,8 @@ public class TopTrumpsCLIApplication {
 				System.out.println("Enter the number for your selection:");
 				int userInput = s.nextInt();
 				if(userInput == 2){
-					Game game = new Game();
+					//System.out.println(writeGameLogsToFile);
+					Game game = new Game(4,writeGameLogsToFile);
 					while(game.isInGame()){
 						game.oneRound();
 					}
